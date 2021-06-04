@@ -29,5 +29,5 @@ BEGIN
 			END IF;
 		END IF;
 	END PROCESS;
-	dataout <= ram(to_integer(unsigned(address)));
+	dataout <= ram(to_integer(unsigned(address))) WHEN to_integer(unsigned(address)) < 2048;
 END syncrama;
