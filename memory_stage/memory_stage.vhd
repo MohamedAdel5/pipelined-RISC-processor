@@ -32,11 +32,11 @@ ARCHITECTURE a_mem OF n_mem IS
 	SIGNAL READ_WRITE : STD_LOGIC;
 BEGIN
 
-	PushPop_LoadStore <= CS_MEM_IN(0);
-	SP_AddSubtract <= CS_MEM_IN(1);
-	MEM_IO <= CS_MEM_IN(2);
-	PORT_IO <= CS_MEM_IN(3);
-	READ_WRITE <= CS_MEM_IN(4);
+	PushPop_LoadStore <= CS_MEM_IN(1);
+	SP_AddSubtract <= CS_MEM_IN(2);
+	MEM_IO <= CS_MEM_IN(3);
+	PORT_IO <= CS_MEM_IN(4);
+	READ_WRITE <= CS_MEM_IN(5);
 
 	RAM_WE <= PORT_IO AND READ_WRITE;
 

@@ -1,127 +1,4 @@
 # Loading project risc
-# Compile of memory_stage.vhd failed with 12 errors.
-# Compile of memory_stage_integration.vhd failed with 13 errors.
-# 2 compiles, 2 failed with 25 errors.
-# Compile of data_bus.vhd was successful.
-# Compile of M_WB_register.vhd was successful.
-# Compile of memory_stage.vhd failed with 12 errors.
-# Compile of memory_stage_integration.vhd failed with 13 errors.
-# Compile of Ram.vhdl was successful.
-# Compile of register.vhd was successful.
-# 6 compiles, 2 failed with 25 errors.
-# Compile of data_bus.vhd was successful.
-# Compile of M_WB_register.vhd was successful.
-# Compile of memory_stage.vhd failed with 12 errors.
-# Compile of memory_stage_integration.vhd failed with 13 errors.
-# Compile of Ram.vhdl was successful.
-# Compile of register.vhd was successful.
-# 6 compiles, 2 failed with 25 errors.
-# Compile of data_bus.vhd was successful.
-# Compile of M_WB_register.vhd was successful.
-# Compile of memory_stage.vhd failed with 10 errors.
-# Compile of memory_stage_integration.vhd failed with 13 errors.
-# Compile of Ram.vhdl was successful.
-# Compile of register.vhd was successful.
-# 6 compiles, 2 failed with 23 errors.
-# Compile of data_bus.vhd was successful.
-# Compile of M_WB_register.vhd was successful.
-# Compile of memory_stage.vhd failed with 4 errors.
-# Compile of memory_stage_integration.vhd failed with 13 errors.
-# Compile of Ram.vhdl was successful.
-# Compile of register.vhd was successful.
-# 6 compiles, 2 failed with 17 errors.
-# Compile of data_bus.vhd was successful.
-# Compile of M_WB_register.vhd was successful.
-# Compile of memory_stage.vhd failed with 14 errors.
-# Compile of memory_stage_integration.vhd failed with 13 errors.
-# Compile of Ram.vhdl was successful.
-# Compile of register.vhd was successful.
-# 6 compiles, 2 failed with 27 errors.
-# Compile of data_bus.vhd was successful.
-# Compile of M_WB_register.vhd was successful.
-# Compile of memory_stage.vhd failed with 2 errors.
-# Compile of memory_stage_integration.vhd failed with 13 errors.
-# Compile of Ram.vhdl was successful.
-# Compile of register.vhd was successful.
-# 6 compiles, 2 failed with 15 errors.
-# Compile of data_bus.vhd was successful.
-# Compile of M_WB_register.vhd was successful.
-# Compile of memory_stage.vhd was successful with warnings.
-# Compile of memory_stage_integration.vhd failed with 13 errors.
-# Compile of Ram.vhdl was successful.
-# Compile of register.vhd was successful.
-# 6 compiles, 1 failed with 13 errors.
-# Compile of data_bus.vhd was successful.
-# Compile of M_WB_register.vhd was successful.
-# Compile of memory_stage.vhd was successful.
-# Compile of memory_stage_integration.vhd failed with 1 errors.
-# Compile of Ram.vhdl was successful.
-# Compile of register.vhd was successful.
-# 6 compiles, 1 failed with 1 error.
-# Compile of data_bus.vhd was successful.
-# Compile of M_WB_register.vhd was successful.
-# Compile of memory_stage.vhd was successful.
-# Compile of memory_stage_integration.vhd failed with 1 errors.
-# Compile of Ram.vhdl was successful.
-# Compile of register.vhd was successful.
-# 6 compiles, 1 failed with 1 error.
-# Compile of data_bus.vhd was successful.
-# Compile of M_WB_register.vhd was successful.
-# Compile of memory_stage.vhd was successful.
-# Compile of memory_stage_integration.vhd failed with 1 errors.
-# Compile of Ram.vhdl was successful.
-# Compile of register.vhd was successful.
-# 6 compiles, 1 failed with 1 error.
-# Compile of data_bus.vhd was successful.
-# Compile of M_WB_register.vhd was successful.
-# Compile of memory_stage.vhd was successful.
-# Compile of memory_stage_integration.vhd failed with 10 errors.
-# Compile of Ram.vhdl was successful.
-# Compile of register.vhd was successful.
-# 6 compiles, 1 failed with 10 errors.
-# Compile of data_bus.vhd was successful.
-# Compile of M_WB_register.vhd was successful.
-# Compile of memory_stage.vhd was successful.
-# Compile of memory_stage_integration.vhd failed with 8 errors.
-# Compile of Ram.vhdl was successful.
-# Compile of register.vhd was successful.
-# 6 compiles, 1 failed with 8 errors.
-# Compile of data_bus.vhd was successful.
-# Compile of M_WB_register.vhd was successful.
-# Compile of memory_stage.vhd was successful.
-# Compile of memory_stage_integration.vhd failed with 7 errors.
-# Compile of Ram.vhdl was successful.
-# Compile of register.vhd was successful.
-# 6 compiles, 1 failed with 7 errors.
-# Compile of data_bus.vhd was successful.
-# Compile of M_WB_register.vhd was successful.
-# Compile of memory_stage.vhd was successful.
-# Compile of memory_stage_integration.vhd failed with 13 errors.
-# Compile of Ram.vhdl was successful.
-# Compile of register.vhd was successful.
-# 6 compiles, 1 failed with 13 errors.
-# Compile of data_bus.vhd was successful.
-# Compile of M_WB_register.vhd was successful.
-# Compile of memory_stage.vhd was successful.
-# Compile of memory_stage_integration.vhd failed with 6 errors.
-# Compile of Ram.vhdl was successful.
-# Compile of register.vhd was successful.
-# 6 compiles, 1 failed with 6 errors.
-# Compile of data_bus.vhd was successful.
-# Compile of M_WB_register.vhd was successful.
-# Compile of memory_stage.vhd was successful.
-# Compile of memory_stage_integration.vhd failed with 4 errors.
-# Compile of Ram.vhdl was successful.
-# Compile of register.vhd was successful.
-# 6 compiles, 1 failed with 4 errors.
-# Compile of memory_stage_integration.vhd failed with 3 errors.
-# Compile of data_bus.vhd was successful.
-# Compile of M_WB_register.vhd was successful.
-# Compile of memory_stage.vhd was successful.
-# Compile of memory_stage_integration.vhd failed with 3 errors.
-# Compile of Ram.vhdl was successful.
-# Compile of register.vhd was successful.
-# 6 compiles, 1 failed with 3 errors.
 # Compile of data_bus.vhd was successful.
 # Compile of M_WB_register.vhd was successful.
 # Compile of memory_stage.vhd was successful.
@@ -129,6 +6,7 @@
 # Compile of Ram.vhdl was successful.
 # Compile of register.vhd was successful.
 # 6 compiles, 0 failed with no errors.
+# Load canceled
 # Compile of data_bus.vhd was successful.
 # Compile of M_WB_register.vhd was successful.
 # Compile of memory_stage.vhd was successful.
@@ -136,4 +14,111 @@
 # Compile of Ram.vhdl was successful.
 # Compile of register.vhd was successful.
 # 6 compiles, 0 failed with no errors.
-# Break key hit
+vsim work.memory_stage_integration
+# vsim work.memory_stage_integration 
+# Start time: 16:56:08 on Jun 04,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# ** Fatal: (vsim-3817) Port "SP_BUFFERED" of entity "n_mem" is not in the component being instantiated.
+#    Time: 0 ps  Iteration: 0  Instance: /memory_stage_integration/u1 File: D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/memory_stage.vhd Line: 13
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 16:56:10 on Jun 04,2021, Elapsed time: 0:00:02
+# Errors: 1, Warnings: 0
+# Compile of data_bus.vhd was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of register.vhd was successful.
+# 6 compiles, 0 failed with no errors.
+vsim work.memory_stage_integration
+# vsim work.memory_stage_integration 
+# Start time: 17:00:20 on Jun 04,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.ram(syncrama)
+# ** Fatal: (vsim-3348) Port length (16) does not match actual length (32) for port "/memory_stage_integration/u3/address".
+#    Time: 0 ps  Iteration: 0  Instance: /memory_stage_integration/u3 File: D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/Ram.vhdl Line: 10
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 17:00:21 on Jun 04,2021, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# Compile of data_bus.vhd was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of register.vhd was successful.
+# 6 compiles, 0 failed with no errors.
+vsim work.memory_stage_integration
+# vsim work.memory_stage_integration 
+# Start time: 17:02:36 on Jun 04,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.ram(syncrama)
+# ** Fatal: (vsim-3742) In array aggregate at choice OTHERS, element array length 16 (31 downto 16) does not match length 32 (31 downto 0) of element subtype.
+#    Time: 0 ps  Iteration: 0  Instance: /memory_stage_integration/u3 File: D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/Ram.vhdl Line: 18
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 17:02:37 on Jun 04,2021, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# Compile of data_bus.vhd was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of register.vhd was successful.
+# 6 compiles, 0 failed with no errors.
+vsim work.memory_stage_integration
+# vsim work.memory_stage_integration 
+# Start time: 17:07:12 on Jun 04,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.ram(syncrama)
+# Loading work.my_ndff(a_my_ndff)
+# ** Error: (vsim-3173) Entity 'D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/work.data_bus' has no architecture.
+# 
+# Load interrupted
+# Error loading design
+# End time: 17:07:13 on Jun 04,2021, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# Compile of data_bus.vhd was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of register.vhd was successful.
+# 6 compiles, 0 failed with no errors.
+vsim work.memory_stage_integration
+# vsim work.memory_stage_integration 
+# Start time: 17:07:47 on Jun 04,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.ram(syncrama)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.data_bus(n_data_bus)

@@ -8,7 +8,7 @@ ENTITY data_bus IS
         dataout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
 END ENTITY data_bus;
 
-ARCHITECTURE n_data_bus OF ram IS
+ARCHITECTURE n_data_bus OF data_bus IS
 BEGIN
     dataout <= datain;
 END n_data_bus;

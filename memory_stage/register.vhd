@@ -1,32 +1,21 @@
-LIBRARY IEEE;
-USE IEEE.std_logic_1164.ALL;
-USE IEEE.numeric_std.ALL;
-
-ENTITY n_register IS
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+ENTITY my_nDFF IS
+    GENERIC (n : INTEGER := 32);
     PORT (
-        clk : IN STD_LOGIC;
-        rst : IN STD_LOGIC;
-        DATA_IN : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-        DATA_OUT : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
-    );
-END n_register;
+        E, Clk, Rst : IN STD_LOGIC;
+        d : IN STD_LOGIC_VECTOR(n - 1 DOWNTO 0);
+        q : OUT STD_LOGIC_VECTOR(n - 1 DOWNTO 0));
+END my_nDFF;
 
-ARCHITECTURE a_register OF n_register IS
-
-    SIGNAL storage : STD_LOGIC_VECTOR(31 DOWNTO 0);
-
+ARCHITECTURE a_my_nDFF OF my_nDFF IS
 BEGIN
-
-    PROCESS (clk, rst)
+    PROCESS (E, Clk, Rst)
     BEGIN
-        IF rst = '1' THEN
-            storage <= (OTHERS => '0');
-            DATA_OUT <= (OTHERS => '0');
-        ELSIF rising_edge(clk) THEN
-            DATA_OUT <= storage;
-        ELSIF falling_edge(clk) THEN
-            storage <= DATA_IN;
+        IF Rst = '1' THEN
+            q <= (OTHERS => '0');
+        ELSIF rising_edge(Clk) AND E = '1' THEN
+            q <= d;
         END IF;
     END PROCESS;
-
-END a_register;
+END a_my_nDFF;

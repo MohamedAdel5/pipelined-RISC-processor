@@ -1,21 +1,11 @@
-D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/data_bus.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/data_bus.vhd
+D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/memory_stage_integration.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/memory_stage_integration.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity data_bus
--- Compiling architecture n_data_bus of ram
--- Loading entity ram
-
-} {} {}} D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/memory_stage.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/memory_stage.vhd
-Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity n_mem
--- Compiling architecture a_mem of n_mem
+-- Compiling entity memory_stage_integration
+-- Compiling architecture a_memory_stage_integration of memory_stage_integration
 
 } {} {}} D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/Ram.vhdl {1 {vcom -work work -2002 -explicit -stats=none D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/Ram.vhdl
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
@@ -26,14 +16,14 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Compiling entity ram
 -- Compiling architecture syncrama of ram
 
-} {} {}} D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/register.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/register.vhd
+} {} {}} D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/memory_stage.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/memory_stage.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity n_register
--- Compiling architecture a_register of n_register
+-- Compiling entity n_mem
+-- Compiling architecture a_mem of n_mem
 
 } {} {}} D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/M_WB_register.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/M_WB_register.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
@@ -43,5 +33,13 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package NUMERIC_STD
 -- Compiling entity m_wb_register
 -- Compiling architecture a_m_wb_register of m_wb_register
+
+} {} {}} D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/register.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/register.vhd
+Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity my_nDFF
+-- Compiling architecture a_my_nDFF of my_nDFF
 
 } {} {}}
