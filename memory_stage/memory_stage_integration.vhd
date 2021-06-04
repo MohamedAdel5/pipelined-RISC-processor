@@ -54,7 +54,7 @@ ARCHITECTURE a_memory_stage_integration OF memory_stage_integration IS
 		);
 	END COMPONENT;
 
-	COMPONENT ram IS
+	COMPONENT data_ram IS
 		GENERIC (n : INTEGER := 32);
 		PORT (
 			clk : IN STD_LOGIC;
@@ -65,7 +65,7 @@ ARCHITECTURE a_memory_stage_integration OF memory_stage_integration IS
 		);
 	END COMPONENT;
 
-	COMPONENT my_nDFF IS
+	COMPONENT sp_register IS
 		GENERIC (n : INTEGER := 32);
 		PORT (
 			E, Clk, Rst : IN STD_LOGIC;
@@ -97,8 +97,8 @@ BEGIN
 	SP_OUT <= SP;
 	u1 : n_mem PORT MAP(CS_MEM_IN, Rsrc_IN, offset_IN, ALU_RESULT, RAM_READ_DATA, PORT_IN_DATA, SP_BUFFERED_IN, SP, SP_UPDATED, RAM_ADDRESS, WB_DATA_IN, RAM_WE);
 	u2 : m_wb_register PORT MAP(clk, rst, CS_WB_IN, CS_WB_OUT, WB_DATA_IN, WB_DATA_OUT, dstbits_OUT, dstbits_IN);
-	u3 : ram PORT MAP(clk, RAM_WE, RAM_ADDRESS, ALU_RESULT, RAM_READ_DATA);
-	u4 : my_nDFF PORT MAP(CS_MEM_IN(0), clk, rst, SP_UPDATED, SP);
+	u3 : data_ram PORT MAP(clk, RAM_WE, RAM_ADDRESS, ALU_RESULT, RAM_READ_DATA);
+	u4 : sp_register PORT MAP(CS_MEM_IN(0), clk, rst, SP_UPDATED, SP);
 	u5 : data_bus PORT MAP(data_bus_in, PORT_IN_DATA);
 
 END a_memory_stage_integration;
