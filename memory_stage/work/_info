@@ -1,0 +1,259 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/eng.study/pipelined-vonneumann-RISC-processor
+Ealu_stage_integration
+Z0 w1622784424
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dD:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage
+Z5 8D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/memory_stage_integration.vhd
+Z6 FD:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/memory_stage_integration.vhd
+l0
+L5
+V_oFjXQCnzNMEK9imFnn`K0
+!s100 ENVBZ0W3_X8onL6jcm^MF2
+Z7 OV;C;10.4d;61
+32
+Z8 !s110 1622784431
+!i10b 1
+Z9 !s108 1622784431.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/memory_stage_integration.vhd|
+Z11 !s107 D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/memory_stage_integration.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1
+Aa_alu_stage_integration
+R1
+R2
+R3
+DEx4 work 21 alu_stage_integration 0 22 _oFjXQCnzNMEK9imFnn`K0
+l94
+L26
+Vh1bGhPMd=K5:A=Xg;jR:;1
+!s100 ?@WBSX4[XMDc<Y4F4fm7K0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Edata_bus
+Z14 w1622780808
+R1
+R2
+R3
+R4
+Z15 8D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/data_bus.vhd
+Z16 FD:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/data_bus.vhd
+l0
+L5
+VAT@:ehl9NjCDl3>]Pihbc0
+!s100 hF8Yhd0Pim3J=cE3bf_6e0
+R7
+32
+Z17 !s110 1622784430
+!i10b 1
+Z18 !s108 1622784430.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/data_bus.vhd|
+Z20 !s107 D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/data_bus.vhd|
+!i113 1
+R12
+R13
+Em_wb_register
+Z21 w1622780563
+R1
+R2
+R3
+R4
+Z22 8D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/M_WB_register.vhd
+Z23 FD:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/M_WB_register.vhd
+l0
+L5
+Vd4URg;^m_FZF21<^>b6jD0
+!s100 Ml6PkDofSnRB?The_ROhV1
+R7
+32
+R8
+!i10b 1
+R18
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/M_WB_register.vhd|
+Z25 !s107 D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/M_WB_register.vhd|
+!i113 1
+R12
+R13
+Aa_m_wb_register
+R1
+R2
+R3
+DEx4 work 13 m_wb_register 0 22 d4URg;^m_FZF21<^>b6jD0
+l24
+L18
+Vih<HS1@Ebg^DWUJ[CCH4H1
+!s100 eGWUD`fPmnzj<mXSN3S:B0
+R7
+32
+R8
+!i10b 1
+R18
+R24
+R25
+!i113 1
+R12
+R13
+En_mem
+Z26 w1622783548
+R1
+R2
+R3
+R4
+Z27 8D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/memory_stage.vhd
+Z28 FD:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/memory_stage.vhd
+l0
+L5
+VWN8oQ2zT9Q:?9`N=Qj1B91
+!s100 QAS@jD9keIO3?b12d[^=g3
+R7
+32
+R8
+!i10b 1
+R9
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/memory_stage.vhd|
+Z30 !s107 D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/memory_stage.vhd|
+!i113 1
+R12
+R13
+Aa_mem
+R1
+R2
+R3
+DEx4 work 5 n_mem 0 22 WN8oQ2zT9Q:?9`N=Qj1B91
+l33
+L22
+V6ILHcRoe`;J1e25ESHIfV0
+!s100 ;E;f:zZFWQT[><TOUR[L;2
+R7
+32
+R8
+!i10b 1
+R9
+R29
+R30
+!i113 1
+R12
+R13
+En_register
+Z31 w1622784251
+R1
+R2
+R3
+R4
+Z32 8D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/register.vhd
+Z33 FD:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/register.vhd
+l0
+L5
+V`DohW09cR4TGih4:eBlY`0
+!s100 I?ki=VE_5eBm=1b9kg4[X3
+R7
+32
+R8
+!i10b 1
+R9
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/register.vhd|
+Z35 !s107 D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/register.vhd|
+!i113 1
+R12
+R13
+Aa_register
+R1
+R2
+R3
+Z36 DEx4 work 10 n_register 0 22 `DohW09cR4TGih4:eBlY`0
+l18
+L14
+Z37 V@kRH`zg6z07hnl^E9E;5=0
+Z38 !s100 8dD?CcDHgUE<VKRN``N813
+R7
+32
+R8
+!i10b 1
+R9
+R34
+R35
+!i113 1
+R12
+R13
+Eram
+Z39 w1622771574
+R1
+R2
+R3
+R4
+Z40 8D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/Ram.vhdl
+Z41 FD:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/Ram.vhdl
+l0
+L5
+VjH7@9eA[69jQf<C?8=H?B3
+!s100 ULgl6Z;a1]5c@ZP[m2IFL1
+R7
+32
+R8
+!i10b 1
+R9
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/Ram.vhdl|
+Z43 !s107 D:/eng.study/pipelined-vonneumann-RISC-processor/memory_stage/Ram.vhdl|
+!i113 1
+R12
+R13
+Asyncrama
+R1
+R2
+R3
+Z44 DEx4 work 3 ram 0 22 jH7@9eA[69jQf<C?8=H?B3
+l23
+L15
+Vm`N``@TeMz@UEB1Lhed;f3
+!s100 Efm0RkG4InB34Ylg_O`XL1
+R7
+32
+R8
+!i10b 1
+R9
+R42
+R43
+!i113 1
+R12
+R13
+An_data_bus
+R14
+R1
+R2
+R3
+R44
+R15
+R16
+l12
+L11
+Vf;beR^fnmdfNzkgc<ISZR1
+!s100 DJ`80QCNhkB4YIOg9gazT0
+R7
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13

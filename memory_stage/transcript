@@ -1,0 +1,139 @@
+# Loading project risc
+# Compile of memory_stage.vhd failed with 12 errors.
+# Compile of memory_stage_integration.vhd failed with 13 errors.
+# 2 compiles, 2 failed with 25 errors.
+# Compile of data_bus.vhd was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd failed with 12 errors.
+# Compile of memory_stage_integration.vhd failed with 13 errors.
+# Compile of Ram.vhdl was successful.
+# Compile of register.vhd was successful.
+# 6 compiles, 2 failed with 25 errors.
+# Compile of data_bus.vhd was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd failed with 12 errors.
+# Compile of memory_stage_integration.vhd failed with 13 errors.
+# Compile of Ram.vhdl was successful.
+# Compile of register.vhd was successful.
+# 6 compiles, 2 failed with 25 errors.
+# Compile of data_bus.vhd was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd failed with 10 errors.
+# Compile of memory_stage_integration.vhd failed with 13 errors.
+# Compile of Ram.vhdl was successful.
+# Compile of register.vhd was successful.
+# 6 compiles, 2 failed with 23 errors.
+# Compile of data_bus.vhd was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd failed with 4 errors.
+# Compile of memory_stage_integration.vhd failed with 13 errors.
+# Compile of Ram.vhdl was successful.
+# Compile of register.vhd was successful.
+# 6 compiles, 2 failed with 17 errors.
+# Compile of data_bus.vhd was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd failed with 14 errors.
+# Compile of memory_stage_integration.vhd failed with 13 errors.
+# Compile of Ram.vhdl was successful.
+# Compile of register.vhd was successful.
+# 6 compiles, 2 failed with 27 errors.
+# Compile of data_bus.vhd was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd failed with 2 errors.
+# Compile of memory_stage_integration.vhd failed with 13 errors.
+# Compile of Ram.vhdl was successful.
+# Compile of register.vhd was successful.
+# 6 compiles, 2 failed with 15 errors.
+# Compile of data_bus.vhd was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful with warnings.
+# Compile of memory_stage_integration.vhd failed with 13 errors.
+# Compile of Ram.vhdl was successful.
+# Compile of register.vhd was successful.
+# 6 compiles, 1 failed with 13 errors.
+# Compile of data_bus.vhd was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd failed with 1 errors.
+# Compile of Ram.vhdl was successful.
+# Compile of register.vhd was successful.
+# 6 compiles, 1 failed with 1 error.
+# Compile of data_bus.vhd was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd failed with 1 errors.
+# Compile of Ram.vhdl was successful.
+# Compile of register.vhd was successful.
+# 6 compiles, 1 failed with 1 error.
+# Compile of data_bus.vhd was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd failed with 1 errors.
+# Compile of Ram.vhdl was successful.
+# Compile of register.vhd was successful.
+# 6 compiles, 1 failed with 1 error.
+# Compile of data_bus.vhd was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd failed with 10 errors.
+# Compile of Ram.vhdl was successful.
+# Compile of register.vhd was successful.
+# 6 compiles, 1 failed with 10 errors.
+# Compile of data_bus.vhd was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd failed with 8 errors.
+# Compile of Ram.vhdl was successful.
+# Compile of register.vhd was successful.
+# 6 compiles, 1 failed with 8 errors.
+# Compile of data_bus.vhd was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd failed with 7 errors.
+# Compile of Ram.vhdl was successful.
+# Compile of register.vhd was successful.
+# 6 compiles, 1 failed with 7 errors.
+# Compile of data_bus.vhd was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd failed with 13 errors.
+# Compile of Ram.vhdl was successful.
+# Compile of register.vhd was successful.
+# 6 compiles, 1 failed with 13 errors.
+# Compile of data_bus.vhd was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd failed with 6 errors.
+# Compile of Ram.vhdl was successful.
+# Compile of register.vhd was successful.
+# 6 compiles, 1 failed with 6 errors.
+# Compile of data_bus.vhd was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd failed with 4 errors.
+# Compile of Ram.vhdl was successful.
+# Compile of register.vhd was successful.
+# 6 compiles, 1 failed with 4 errors.
+# Compile of memory_stage_integration.vhd failed with 3 errors.
+# Compile of data_bus.vhd was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd failed with 3 errors.
+# Compile of Ram.vhdl was successful.
+# Compile of register.vhd was successful.
+# 6 compiles, 1 failed with 3 errors.
+# Compile of data_bus.vhd was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of register.vhd was successful.
+# 6 compiles, 0 failed with no errors.
+# Compile of data_bus.vhd was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of register.vhd was successful.
+# 6 compiles, 0 failed with no errors.
+# Break key hit
