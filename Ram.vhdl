@@ -7,9 +7,9 @@ ENTITY ram IS
 	PORT (
 		clk : IN STD_LOGIC;
 		we : IN STD_LOGIC;
-		address : IN STD_LOGIC_VECTOR(n - 1 DOWNTO 0);
-		datain : IN STD_LOGIC_VECTOR(n - 1 DOWNTO 0);
-		dataout : OUT STD_LOGIC_VECTOR(n - 1 DOWNTO 0));
+		address : IN STD_LOGIC_VECTOR(2 * n - 1 DOWNTO 0);
+		datain : IN STD_LOGIC_VECTOR(2 * n - 1 DOWNTO 0);
+		dataout : OUT STD_LOGIC_VECTOR(2 * n - 1 DOWNTO 0));
 END ENTITY ram;
 
 ARCHITECTURE syncrama OF ram IS
@@ -19,7 +19,7 @@ ARCHITECTURE syncrama OF ram IS
 		0 => "0001000000000001",
 		OTHERS => X"0000"
 	);
-
+	SIGNAL RamOut : STD_LOGIC_VECTOR(31 DOWNTO 0);
 BEGIN
 	PROCESS (clk) IS
 	BEGIN
@@ -29,5 +29,7 @@ BEGIN
 			END IF;
 		END IF;
 	END PROCESS;
-	dataout <= ram(to_integer(unsigned(address)));
+	RamOut(15 DOWNTO 0) <= ram(to_integer(unsigned(address)));
+	RamOut(31 DOWNTO 16) <= ram(to_integer(unsigned(address)) + 1);
+	dataout <= RamOut;
 END syncrama;

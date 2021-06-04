@@ -1,0 +1,66 @@
+Library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+ENTITY fetchingStage IS
+PORT( HazardDetection,Clk,Rst : IN std_logic;
+		   Offset : OUT std_logic_vector(15 DOWNTO 0);
+		   OpCode : OUT std_logic_vector(6 DOWNTO 0);
+		   SrcBits : OUT std_logic_vector(2 DOWNTO 0);
+		   DstBits : OUT std_logic_vector(2 DOWNTO 0));
+END fetchingStage;
+ARCHITECTURE fetch OF fetchingStage IS
+
+    COMPONENT ram IS
+    GENERIC ( n : integer := 16);
+	PORT(
+		clk : IN std_logic;
+		we  : IN std_logic;
+		address : IN  std_logic_vector(2*n-1 DOWNTO 0);
+		datain  : IN  std_logic_vector(2*n-1 DOWNTO 0);
+		dataout : OUT std_logic_vector(2*n-1 DOWNTO 0));
+    END  COMPONENT;
+
+	COMPONENT stageBuffer IS
+    GENERIC ( n : integer := 29);
+    PORT( E,Clk,Rst : IN std_logic;
+            d : IN std_logic_vector(n-1 DOWNTO 0);
+            q : OUT std_logic_vector(n-1 DOWNTO 0));
+    END COMPONENT; 
+
+	COMPONENT my_nDFF IS
+		GENERIC ( n : integer := 32);
+		PORT( E,Clk,Rst : IN std_logic;
+			d : IN std_logic_vector(n-1 DOWNTO 0);
+			q : OUT std_logic_vector(n-1 DOWNTO 0));
+	END COMPONENT;
+    
+	signal PC : std_logic_vector(31 DOWNTO 0):= "00000000000000000000000000000000";
+	signal IR : std_logic_vector(31 DOWNTO 0);
+	signal DataToWrite : std_logic_vector(28 DOWNTO 0);
+	signal DataToRead : std_logic_vector(28 DOWNTO 0);
+	signal E : std_logic;
+
+BEGIN
+
+	PROCESS (Clk,Rst)
+		BEGIN
+		IF Rst = '1' THEN
+			PC <= (OTHERS=>'0');
+		ELSIF falling_edge(Clk) and HazardDetection = '0' and (IR(15 downto 9) ="0010101" or IR(15 downto 9) ="0010110" or IR(15 downto 9) ="0010111" or IR(15 downto 9) ="0100010" or IR(15 downto 9) ="0100011" or IR(15 downto 9) ="0100100" )   THEN
+			PC <= std_logic_vector( unsigned(PC) + 2 );
+		elsif falling_edge(Clk) and HazardDetection = '0'   THEN
+			PC <= std_logic_vector( unsigned(PC) + 1 );
+		END IF;
+	END PROCESS;
+	E<=not (HazardDetection);
+	my_ram: ram GENERIC MAP(16) PORT MAP(CLK,'0',PC,"00000000000000000000000000000000",IR);   
+	DataToWrite(28 downto 13) <= IR(31 downto 16);
+	DataToWrite(12 downto 6) <= IR(15 downto 9);
+	DataToWrite(5 downTo 3) <= IR(5 downTo 3);
+	DataToWrite(2 downto 0) <= IR(2 downto 0);  
+	IFID: stageBuffer GENERIC MAP(29) port map( E,Clk,Rst,DataToWrite,DataToRead);
+	Offset <= DataToRead(28 downto 13);
+	OpCode <= DataToRead(12 downto 6);
+	SrcBits<= DataToRead(5 downto 3);
+	DstBits<= DataToRead(2 downto 0);
+END fetch;
