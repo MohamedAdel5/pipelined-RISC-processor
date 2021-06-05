@@ -45,7 +45,7 @@ BEGIN
 	PROCESS (Clk,Rst)
 		BEGIN
 		IF Rst = '1' THEN
-			PC <= (OTHERS=>'0');
+			PC <= (OTHERS=>'0');	--Need to be handled by reset unit
 		ELSIF falling_edge(Clk) and HazardDetection = '0' and (IR(15 downto 9) ="0010101" or IR(15 downto 9) ="0010110" or IR(15 downto 9) ="0010111" or IR(15 downto 9) ="0100010" or IR(15 downto 9) ="0100011" or IR(15 downto 9) ="0100100" )   THEN
 			PC <= std_logic_vector( unsigned(PC) + 2 );
 		elsif falling_edge(Clk) and HazardDetection = '0'   THEN

@@ -8,6 +8,7 @@ PORT(Clk,Rst : IN std_logic;
 		   DstBitsIn : IN std_logic_vector(2 DOWNTO 0);
            DstBitsWrite: IN std_logic_vector(2 DOWNTO 0);
            HazardDetection : IN std_logic;
+           ControlSignalsWBIN : IN std_logic;
            WriteBackData : IN std_logic_vector(31 DOWNTO 0);
 		   ExtendedOffset : Out std_logic_vector(31 DOWNTO 0);
 		   Rsrc : Out std_logic_vector(31 DOWNTO 0);
@@ -54,7 +55,7 @@ signal RdstDec : std_logic_vector(31 DOWNTO 0);
 BEGIN
 ExOffset(15 downto 0) <= Offset;
 CU:  controlUnit PORT map (Clk,Rst,OpCode,ControlSignals);
-RegFile: registerFile PORT map (Clk,Rst,WriteBackData,SrcBitsIn,DstBitsIn,DstBitsWrite,ControlSignals(0),RsrcDec,RdstDec);
+RegFile: registerFile PORT map (Clk,Rst,WriteBackData,SrcBitsIn,DstBitsIn,DstBitsWrite,ControlSignalsWBIN,RsrcDec,RdstDec);
 ControlSignalsAfterHazard <= "0000000000000" when HazardDetection ='1'
     else ControlSignals;
 DataToWrite(114 downto 112) <= SrcBitsIn;
