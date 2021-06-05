@@ -59,6 +59,7 @@ ARCHITECTURE int OF integration IS
 		CS_WB_OUT: OUT std_logic;
 		CS_MEM_OUT: OUT std_logic_vector(5 DOWNTO 0);
 		Rsrc_OUT: OUT std_logic_vector(31 DOWNTO 0);
+		Rdst_OUT: OUT std_logic_vector(31 DOWNTO 0);
 		DstBits_OUT: OUT std_logic_vector(2 DOWNTO 0);
 		offset_OUT: OUT std_logic_vector(31 DOWNTO 0);
 		ALU_RESULT: OUT std_logic_vector(31 DOWNTO 0);
@@ -110,15 +111,48 @@ ARCHITECTURE int OF integration IS
 		hazard_detected: OUT std_logic);
     END component;
 
+	--Fetching Signals
+	signal Offset :std_logic_vector(15 DOWNTO 0);
+	signal OpCode : std_logic_vector(6 DOWNTO 0);
+	signal SrcBitsFetch : std_logic_vector(2 DOWNTO 0);
+	signal DstBitsFetch : std_logic_vector(2 DOWNTO 0);
+	--Decoding Signals
+	signal ExtendedOffset : std_logic_vector(31 DOWNTO 0);
+	signal RsrcDec : std_logic_vector(31 DOWNTO 0);
+	signal RdstDec : std_logic_vector(31 DOWNTO 0);
+	signal DstBitsDec : std_logic_vector(2 DOWNTO 0);
+	signal SrcBitsDec : std_logic_vector(2 DOWNTO 0);
+	signal ControlSignalsEX : std_logic_vector(5 DOWNTO 0);
+	signal ControlSignalsWB : std_logic;
+	signal ControlSignalsM : std_logic_vector(5 DOWNTO 0);
+	--Execution Signals
+	signal CS_WB_EX:  std_logic;
+	signal CS_MEM_EX:  std_logic_vector(5 DOWNTO 0);
+	signal RsrcEX:  std_logic_vector(31 DOWNTO 0);
+	signal RdstEX:  std_logic_vector(31 DOWNTO 0);
+	signal DstBits_EX:  std_logic_vector(2 DOWNTO 0);
+	signal offset_EX:  std_logic_vector(31 DOWNTO 0);
+	signal ALU_RESULT:  std_logic_vector(31 DOWNTO 0);
+	signal SP_EX:  std_logic_vector(31 DOWNTO 0);
+	--Memory Signals
+	signal ControlSignalsWBIN : STD_LOGIC;
+	signal WriteBackData : STD_LOGIC_VECTOR(31 DOWNTO 0);
+	signal DstBitsWrite : STD_LOGIC_VECTOR(2 DOWNTO 0);
+	signal SPMem : STD_LOGIC_VECTOR(31 DOWNTO 0);
+
+	--Hazard Signals
 	signal HazardDetection :std_logic;
+	signal forward_source: std_logic_vector(1 DOWNTO 0);
+	signal forward_destination: std_logic_vector(1 DOWNTO 0);
+
 
 
 BEGIN
 
-fecthing: fetchingStage PORT map(HazardDetection,Clk,Rst,Offset,OpCode ,SrcBits ,DstBits);
-decoding: decodingStage PORT map(Clk,Rst ,Offset ,OpCode ,SrcBitsIn ,DstBitsIn ,DstBitsWrite,HazardDetection ,ControlSignalsWBIN ,WriteBackData ,ExtendedOffset ,Rsrc ,Rdst ,DstBitsOut ,SrcBitsOut ,ControlSignalsEX ,ControlSignalsWB ,ControlSignalsM );
-execution: alu_stage_integration PORT map(Clk, Rst , CS_WB_IN , CS_MEM_IN ,CS_EXEC,Rsrc_IN,Rdst,DstBits_IN,offset_IN,SP_IN,Forward_Source,Forward_Destination,Rdst_MEM,Rdst_WB,CS_WB_OUT,CS_MEM_OUT,Rsrc_OUT,DstBits_OUT,offset_OUT,ALU_RESULT,SP_OUT);
-memory: memory_stage_integration PORT map(Clk ,Rst,CS_WB_IN,CS_MEM_IN ,dstbits_IN ,Rsrc_IN ,offset_IN ,ALU_RESULT ,SP_BUFFERED_IN,BUS_IN ,BUS_OUT ,CS_WB_OUT ,WB_DATA_OUT ,dstbits_OUT ,SP_OUT );
-hazards: forwarding_hazard_unit PORT mapPORT(IF_ID_OP_CODE,IF_ID_src_bits,IF_ID_dst_bits,ID_EX_read_write,ID_EX_MEM_IO,ID_EX_PORT_IO,ID_EX_src_bits,ID_EX_dst_bits,EX_M_WB,EX_M_dst_bits,M_WB_WB,M_WB_dst_bits,forward_source,forward_destination,HazardDetection);
+fecthing: fetchingStage PORT map(HazardDetection,Clk,Rst,Offset,OpCode ,SrcBitsFetch ,DstBitsFetch);
+decoding: decodingStage PORT map(Clk,Rst ,Offset ,OpCode ,SrcBitsFetch ,DstBitsFetch ,DstBitsWrite,HazardDetection ,ControlSignalsWBIN ,WriteBackData ,ExtendedOffset ,RsrcDec ,RdstDec ,DstBitsDec ,SrcBitsDec ,ControlSignalsEX ,ControlSignalsWB ,ControlSignalsM );
+execution: alu_stage_integration PORT map(Clk, Rst , ControlSignalsWB , ControlSignalsM ,ControlSignalsEX,RsrcDec,RdstDec,DstBitsDec,ExtendedOffset,SPMem,forward_source,forward_destination,RdstEX,WriteBackData,CS_WB_EX,CS_MEM_EX,RsrcEX,RdstEX,DstBits_EX,offset_EX,ALU_RESULT,SP_EX);
+memory: memory_stage_integration PORT map(Clk ,Rst,CS_WB_EX,CS_MEM_EX ,DstBits_EX ,RsrcEX ,offset_EX ,ALU_RESULT ,SP_EX,IOPort ,IOPort ,ControlSignalsWBIN ,WriteBackData ,DstBitsWrite ,SPMem );
+hazards: forwarding_hazard_unit PORT map(OpCode,SrcBitsFetch,DstBitsFetch,ControlSignalsM(5),ControlSignalsM(3),ControlSignalsM(4),SrcBitsDec,DstBitsDec,CS_WB_EX,DstBits_EX ,ControlSignalsWBIN,DstBitsWrite,forward_source,forward_destination,HazardDetection);
 
 END int;
