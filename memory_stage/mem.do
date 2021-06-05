@@ -21,8 +21,8 @@ sim:/memory_stage_integration/RAM_READ_DATA \
 sim:/memory_stage_integration/RAM_ADDRESS \
 sim:/memory_stage_integration/RAM_WE \
 sim:/memory_stage_integration/SP_IN \
-sim:/memory_stage_integration/PORT_IN_DATA \
-sim:/memory_stage_integration/data_bus_in \
+sim:/memory_stage_integration/BUS_IN \
+sim:/memory_stage_integration/BUS_OUT \
 sim:/memory_stage_integration/SP \
 sim:/memory_stage_integration/SP_UPDATED
 force -freeze sim:/memory_stage_integration/clk 1 0, 0 {50 ps} -r 100
@@ -55,7 +55,7 @@ run
 # read from data bus 0110
 
 
-force -freeze sim:/memory_stage_integration/PORT_IN_DATA 00000000000000000000000000000110 0
+force -freeze sim:/memory_stage_integration/BUS_IN 00000000000000000000000000000110 0
 force -freeze sim:/memory_stage_integration/CS_MEM_IN 010000 0
 
 run
