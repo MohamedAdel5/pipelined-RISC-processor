@@ -1,4 +1,4 @@
-# pipelined-vonneumann-RISC-processor
+# pipelined-RISC-processor
 An implementation for a pipelined harvard RISC architecture of a processor in VHDL.
 
 - Architecure design (incomplete): <a href="https://drive.google.com/file/d/1TQl3SSPwa5STya16xOVKFIDM3jhhFnv2/view?usp=sharing">DRAW.IO</a>
