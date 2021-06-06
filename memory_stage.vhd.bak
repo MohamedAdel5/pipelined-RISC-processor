@@ -48,7 +48,7 @@ BEGIN
 
 	PUSH_POP_ADDRESS <= SP_ALU_OUT WHEN SP_AddSubtract = '1'
 		ELSE
-		STD_LOGIC_VECTOR(unsigned(SP_ALU_OUT) + 1);
+		STD_LOGIC_VECTOR(unsigned(SP_ALU_OUT) - 1);
 
 	RAM_ADDRESS <= PUSH_POP_ADDRESS WHEN PushPop_LoadStore = '0'
 		ELSE

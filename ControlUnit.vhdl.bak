@@ -33,6 +33,6 @@ BEGIN
                 else "0000000011011" when OpCode = "0100001"   --POP
                 else "1000010000001" when OpCode = "0100010"   --LDM
                 else "0000000010101" when OpCode = "0100011"   --LDD
-                else "0000001010100" when OpCode = "0100100"   --STD
+                else "0000000101010" when OpCode = "0100100"   --STD
                 else "0000000000000" ;  --RESET
 END CU;

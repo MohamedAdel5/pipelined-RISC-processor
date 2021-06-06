@@ -1,0 +1,4170 @@
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# 23 compiles, 0 failed with no errors.
+vsim -gui work.n_alu_logic
+# vsim -gui work.n_alu_logic 
+# Start time: 21:47:33 on Jun 05,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+add wave -position insertpoint  \
+sim:/n_alu_logic/source \
+sim:/n_alu_logic/Rsrc \
+sim:/n_alu_logic/Rdst_WB \
+sim:/n_alu_logic/Rdst_MEM \
+sim:/n_alu_logic/Rdst \
+sim:/n_alu_logic/Offset \
+sim:/n_alu_logic/Forward_Source \
+sim:/n_alu_logic/Forward_Destination \
+sim:/n_alu_logic/first_source \
+sim:/n_alu_logic/destination \
+sim:/n_alu_logic/CS_ALU_SOURCE \
+sim:/n_alu_logic/CS_ALU_OPERATION \
+sim:/n_alu_logic/CCR_OUT \
+sim:/n_alu_logic/CCR \
+sim:/n_alu_logic/ALU_RESULT
+force -freeze sim:/n_alu_logic/source 10#10 0
+quit -sim
+# End time: 21:48:09 on Jun 05,2021, Elapsed time: 0:00:36
+# Errors: 0, Warnings: 2
+vsim -gui work.n_alu_logic
+# vsim -gui work.n_alu_logic 
+# Start time: 21:48:17 on Jun 05,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+add wave -position insertpoint  \
+sim:/n_alu_logic/source \
+sim:/n_alu_logic/Rsrc \
+sim:/n_alu_logic/Rdst_WB \
+sim:/n_alu_logic/Rdst_MEM \
+sim:/n_alu_logic/Rdst \
+sim:/n_alu_logic/Offset \
+sim:/n_alu_logic/Forward_Source \
+sim:/n_alu_logic/Forward_Destination \
+sim:/n_alu_logic/first_source \
+sim:/n_alu_logic/destination \
+sim:/n_alu_logic/CS_ALU_SOURCE \
+sim:/n_alu_logic/CS_ALU_OPERATION \
+sim:/n_alu_logic/CCR_OUT \
+sim:/n_alu_logic/CCR \
+sim:/n_alu_logic/ALU_RESULT
+force -freeze sim:/n_alu_logic/Rsrc 10#30 0
+force -freeze sim:/n_alu_logic/Rdst_WB 10#5 0
+force -freeze sim:/n_alu_logic/Rdst_MEM 10#90 0
+force -freeze sim:/n_alu_logic/Rdst 10#35 0
+force -freeze sim:/n_alu_logic/Offset 10#200 0
+force -freeze sim:/n_alu_logic/Forward_Source 00 0
+force -freeze sim:/n_alu_logic/Forward_Destination 01 0
+force -freeze sim:/n_alu_logic/CS_ALU_SOURCE 0 0
+force -freeze sim:/n_alu_logic/CS_ALU_OPERATION 00000 0
+force -freeze sim:/n_alu_logic/CCR 000 0
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /n_alu_logic/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /n_alu_logic/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /n_alu_logic/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /n_alu_logic/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /n_alu_logic/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /n_alu_logic/u1
+force -freeze sim:/n_alu_logic/Forward_Destination 00 0
+run
+force -freeze sim:/n_alu_logic/Forward_Destination 01 0
+run
+quit -sim
+# End time: 21:50:33 on Jun 05,2021, Elapsed time: 0:02:16
+# Errors: 0, Warnings: 7
+vsim -gui work.alu_stage_integration
+# vsim -gui work.alu_stage_integration 
+# Start time: 21:51:20 on Jun 05,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+add wave -position insertpoint  \
+sim:/alu_stage_integration/SP_OUT \
+sim:/alu_stage_integration/SP_IN \
+sim:/alu_stage_integration/rst \
+sim:/alu_stage_integration/Rsrc_OUT \
+sim:/alu_stage_integration/Rsrc_IN \
+sim:/alu_stage_integration/Rdst_WB \
+sim:/alu_stage_integration/Rdst_OUT \
+sim:/alu_stage_integration/Rdst_MEM \
+sim:/alu_stage_integration/Rdst \
+sim:/alu_stage_integration/offset_OUT \
+sim:/alu_stage_integration/offset_IN \
+sim:/alu_stage_integration/Forward_Source \
+sim:/alu_stage_integration/Forward_Destination \
+sim:/alu_stage_integration/DstBits_OUT \
+sim:/alu_stage_integration/DstBits_IN \
+sim:/alu_stage_integration/CS_WB_OUT \
+sim:/alu_stage_integration/CS_WB_IN \
+sim:/alu_stage_integration/CS_MEM_OUT \
+sim:/alu_stage_integration/CS_MEM_IN \
+sim:/alu_stage_integration/CS_EXEC \
+sim:/alu_stage_integration/clk \
+sim:/alu_stage_integration/ALU_RESULT
+force -freeze sim:/alu_stage_integration/SP_IN 10#3 0
+force -freeze sim:/alu_stage_integration/rst 1 0
+force -freeze sim:/alu_stage_integration/Rsrc_IN 10#55 0
+force -freeze sim:/alu_stage_integration/Rdst_WB 10#75 0
+force -freeze sim:/alu_stage_integration/Rdst_MEM 10#33 0
+force -freeze sim:/alu_stage_integration/Rdst 10#46 0
+force -freeze sim:/alu_stage_integration/offset_IN 10#22 0
+force -freeze sim:/alu_stage_integration/Forward_Source 00 0
+force -freeze sim:/alu_stage_integration/Forward_Destination 00 0
+force -freeze sim:/alu_stage_integration/DstBits_IN 001 0
+force -freeze sim:/alu_stage_integration/CS_WB_IN 0 0
+force -freeze sim:/alu_stage_integration/CS_MEM_IN 10#3 0
+force -freeze sim:/alu_stage_integration/CS_EXEC 10#4 0
+force -freeze sim:/alu_stage_integration/clk 1 0, 0 {50 ps} -r 100
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /alu_stage_integration/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /alu_stage_integration/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /alu_stage_integration/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /alu_stage_integration/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /alu_stage_integration/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /alu_stage_integration/u1/u1
+force -freeze sim:/alu_stage_integration/rst 0 0
+run
+run
+run
+force -freeze sim:/alu_stage_integration/Forward_Destination 01 0
+run
+run
+force -freeze sim:/alu_stage_integration/CS_EXEC 10#0 0
+run
+force -freeze sim:/alu_stage_integration/Forward_Destination 00 0
+run
+force -freeze sim:/alu_stage_integration/Forward_Destination 01 0
+run
+force -freeze sim:/alu_stage_integration/Forward_Destination 10 0
+run
+quit -sim
+# End time: 21:57:36 on Jun 05,2021, Elapsed time: 0:06:16
+# Errors: 0, Warnings: 7
+vsim -gui work.alu_stage_integration
+# vsim -gui work.alu_stage_integration 
+# Start time: 22:08:27 on Jun 05,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+add wave -position insertpoint  \
+sim:/alu_stage_integration/SP_OUT \
+sim:/alu_stage_integration/SP_IN \
+sim:/alu_stage_integration/rst \
+sim:/alu_stage_integration/Rsrc_OUT \
+sim:/alu_stage_integration/Rsrc_IN \
+sim:/alu_stage_integration/Rdst_WB \
+sim:/alu_stage_integration/Rdst_OUT \
+sim:/alu_stage_integration/Rdst_MEM \
+sim:/alu_stage_integration/Rdst \
+sim:/alu_stage_integration/offset_OUT \
+sim:/alu_stage_integration/offset_IN \
+sim:/alu_stage_integration/Forward_Source \
+sim:/alu_stage_integration/Forward_Destination \
+sim:/alu_stage_integration/DstBits_OUT \
+sim:/alu_stage_integration/DstBits_IN \
+sim:/alu_stage_integration/CS_WB_OUT \
+sim:/alu_stage_integration/CS_WB_IN \
+sim:/alu_stage_integration/CS_MEM_OUT \
+sim:/alu_stage_integration/CS_MEM_IN \
+sim:/alu_stage_integration/CS_EXEC \
+sim:/alu_stage_integration/clk \
+sim:/alu_stage_integration/ALU_RESULT
+force -freeze sim:/alu_stage_integration/SP_IN 10#33 0
+force -freeze sim:/alu_stage_integration/rst 1 0
+force -freeze sim:/alu_stage_integration/Rsrc_IN 10#23 0
+force -freeze sim:/alu_stage_integration/Rdst_WB 10#99 0
+force -freeze sim:/alu_stage_integration/Rdst_MEM 10#77 0
+force -freeze sim:/alu_stage_integration/Rdst 10#98 0
+force -freeze sim:/alu_stage_integration/offset_IN 10#12 0
+force -freeze sim:/alu_stage_integration/Forward_Source 00 0
+force -freeze sim:/alu_stage_integration/Forward_Destination 00 0
+force -freeze sim:/alu_stage_integration/DstBits_IN 111 0
+force -freeze sim:/alu_stage_integration/CS_WB_IN 0 0
+force -freeze sim:/alu_stage_integration/CS_MEM_IN 10#3 0
+force -freeze sim:/alu_stage_integration/CS_EXEC 10#3 0
+force -freeze sim:/alu_stage_integration/clk 1 0, 0 {50 ps} -r 100
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /alu_stage_integration/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /alu_stage_integration/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /alu_stage_integration/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /alu_stage_integration/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /alu_stage_integration/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /alu_stage_integration/u1/u1
+force -freeze sim:/alu_stage_integration/rst 0 0
+force -freeze sim:/alu_stage_integration/CS_EXEC 000101 0
+run
+force -freeze sim:/alu_stage_integration/Rdst_MEM 11111111111111111111111111111111 0
+force -freeze sim:/alu_stage_integration/Forward_Destination 01 0
+force -freeze sim:/alu_stage_integration/CS_EXEC 000110 0
+run
+force -freeze sim:/alu_stage_integration/Forward_Destination 00 0
+run
+force -freeze sim:/alu_stage_integration/Forward_Destination 01 0
+run
+quit -sim
+# End time: 22:13:43 on Jun 05,2021, Elapsed time: 0:05:16
+# Errors: 0, Warnings: 8
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd failed with 1 errors.
+# 24 compiles, 1 failed with 1 error.
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# 24 compiles, 0 failed with no errors.
+vsim -gui work.int
+# vsim -gui work.int 
+# Start time: 22:59:23 on Jun 05,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+quit -sim
+# End time: 22:59:29 on Jun 05,2021, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 3
+do integration.do
+# vsim -gui work.integration 
+# Start time: 22:59:56 on Jun 05,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.integration(int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** UI-Msg: (vsim-7) Failed to open mem file "E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/test4Out.mem" in read mode.
+# No such file or directory. (errno = ENOENT)
+# Error in macro ./integration.do line 2
+# ** UI-Msg: (vsim-7) Failed to open mem file "E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/test4Out.mem" in read mode.
+# No such file or directory. (errno = ENOENT)
+#     while executing
+# "mem load -i E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/test4Out.mem /integration/fecthing/my_ram/ram"
+do integration.do
+# End time: 23:01:18 on Jun 05,2021, Elapsed time: 0:01:22
+# Errors: 0, Warnings: 1
+# vsim -gui work.integration 
+# Start time: 23:01:18 on Jun 05,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.integration(int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** UI-Msg: (vsim-7) Failed to open mem file "E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/test4Out.mem" in read mode.
+# No such file or directory. (errno = ENOENT)
+# Error in macro ./integration.do line 2
+# ** UI-Msg: (vsim-7) Failed to open mem file "E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/test4Out.mem" in read mode.
+# No such file or directory. (errno = ENOENT)
+#     while executing
+# "mem load -i E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/test4Out.mem /integration/fecthing/my_ram/ram"
+quit -sim
+# End time: 23:01:58 on Jun 05,2021, Elapsed time: 0:00:40
+# Errors: 0, Warnings: 1
+do integration.do
+# vsim -gui work.integration 
+# Start time: 23:02:02 on Jun 05,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.integration(int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** UI-Msg: (vsim-7) Failed to open mem file "E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/test4Out.mem" in read mode.
+# No such file or directory. (errno = ENOENT)
+# Error in macro ./integration.do line 2
+# ** UI-Msg: (vsim-7) Failed to open mem file "E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/test4Out.mem" in read mode.
+# No such file or directory. (errno = ENOENT)
+#     while executing
+# "mem load -i E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/test4Out.mem /integration/fecthing/my_ram/ram"
+quit -sim
+# End time: 23:02:48 on Jun 05,2021, Elapsed time: 0:00:46
+# Errors: 0, Warnings: 1
+# Compile of int.vhd was successful.
+do integration.do
+# vsim -gui work.integration 
+# Start time: 23:10:18 on Jun 05,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.integration(int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** UI-Msg: (vsim-7) Failed to open mem file "E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/test4Out.mem" in read mode.
+# No such file or directory. (errno = ENOENT)
+# Error in macro ./integration.do line 2
+# ** UI-Msg: (vsim-7) Failed to open mem file "E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/test4Out.mem" in read mode.
+# No such file or directory. (errno = ENOENT)
+#     while executing
+# "mem load -i E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/test4Out.mem /integration/fecthing/my_ram/ram"
+quit -sim
+# End time: 23:10:40 on Jun 05,2021, Elapsed time: 0:00:22
+# Errors: 0, Warnings: 2
+do integration.do
+# vsim -gui work.integration 
+# Start time: 23:13:00 on Jun 05,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.integration(int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /integration/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /integration/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /integration/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /integration/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /integration/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /integration/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /integration/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /integration/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /integration/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /integration/execution/u1/u1
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1100 ps  Iteration: 3  Instance: /integration/execution/u1/u1
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1200 ps  Iteration: 3  Instance: /integration/execution/u1/u1
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1300 ps  Iteration: 3  Instance: /integration/execution/u1/u1
+quit -sim
+# End time: 23:14:08 on Jun 05,2021, Elapsed time: 0:01:08
+# Errors: 0, Warnings: 14
+do integration.do
+# vsim -gui work.int 
+# Start time: 23:14:25 on Jun 05,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** UI-Msg (suppressible): (vsim-4008) Object '/integration/fecthing/my_ram/ram' not found.
+# Error in macro ./integration.do line 2
+# ** UI-Msg (suppressible): (vsim-4008) Object '/integration/fecthing/my_ram/ram' not found.
+# 
+#     while executing
+# "mem load -i D:/SchoolWork/YearThree/Sem2/test4Out.mem /integration/fecthing/my_ram/ram"
+quit -sim
+# End time: 23:14:54 on Jun 05,2021, Elapsed time: 0:00:29
+# Errors: 0, Warnings: 1
+vsim -gui work.int
+# vsim -gui work.int 
+# Start time: 23:15:02 on Jun 05,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+mem load -i D:/SchoolWork/YearThree/Sem2/test4Out.mem /int/fetching/my_ram/ram
+add wave -position insertpoint  \
+sim:/int/rst \
+sim:/int/mem_WB_DATA_OUT \
+sim:/int/mem_SP_OUT \
+sim:/int/mem_dstbits_OUT \
+sim:/int/mem_CS_WB_OUT \
+sim:/int/IO_PORT \
+sim:/int/int_SrcBitsOut \
+sim:/int/int_Rsrc \
+sim:/int/int_Rdst \
+sim:/int/int_ExtendedOffset \
+sim:/int/int_DstBitsOut \
+sim:/int/int_ControlSignalsWB \
+sim:/int/int_ControlSignalsM \
+sim:/int/int_ControlSignalsEX \
+sim:/int/hazard_detected \
+sim:/int/forward_source \
+sim:/int/forward_destination \
+sim:/int/fetch_SrcBits \
+sim:/int/fetch_OpCode \
+sim:/int/fetch_Offset \
+sim:/int/fetch_DstBits \
+sim:/int/ex_SP_OUT \
+sim:/int/ex_Rsrc_OUT \
+sim:/int/ex_Rdst_OUT \
+sim:/int/ex_offset_OUT \
+sim:/int/ex_DstBits_OUT \
+sim:/int/ex_CS_WB_OUT \
+sim:/int/ex_CS_MEM_OUT \
+sim:/int/ex_ALU_RESULT \
+sim:/int/dec_SrcBitsOut \
+sim:/int/dec_Rsrc \
+sim:/int/dec_Rdst \
+sim:/int/dec_ExtendedOffset \
+sim:/int/dec_DstBitsOut \
+sim:/int/dec_ControlSignalsWB \
+sim:/int/dec_ControlSignalsM \
+sim:/int/dec_ControlSignalsEX \
+sim:/int/clk
+add wave -position insertpoint  \
+sim:/int/fetching/PC
+add wave -position insertpoint  \
+sim:/int/fetching/OpCode
+add wave -position insertpoint  \
+sim:/int/decoding/RegFile/R7 \
+sim:/int/decoding/RegFile/R6 \
+sim:/int/decoding/RegFile/R5 \
+sim:/int/decoding/RegFile/R4 \
+sim:/int/decoding/RegFile/R3 \
+sim:/int/decoding/RegFile/R2 \
+sim:/int/decoding/RegFile/R1 \
+sim:/int/decoding/RegFile/R0
+add wave -position insertpoint  \
+sim:/int/execution/flag_out_alu_in
+quit -sim
+# End time: 23:18:49 on Jun 05,2021, Elapsed time: 0:03:47
+# Errors: 0, Warnings: 1
+do integration.do
+# vsim -gui work.int 
+# Start time: 23:19:08 on Jun 05,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** UI-Msg: (vish-4014) No objects found matching 'add'.
+# ** UI-Msg: (vish-4014) No objects found matching 'wave'.
+# Unrecognized option: "-position" ignored.
+# ** UI-Msg: (vish-4014) No objects found matching 'insertpoint'.
+# Error in macro ./integration.do line 42
+# ** UI-Msg: (vish-4014) No objects found matching 'add'.
+# ** UI-Msg: (vish-4014) No objects found matching 'wave'.
+# Unrecognized option: "-position" ignored.
+# ** UI-Msg: (vish-4014) No objects found matching 'insertpoint'.
+#     while executing
+# "add wave -position insertpoint  \
+# add wave -position insertpoint  \
+# sim:/int/rst \
+# sim:/int/mem_WB_DATA_OUT \
+# sim:/int/mem_SP_OUT \
+# sim:/int/mem_dstbi..."
+quit -sim
+# End time: 23:19:54 on Jun 05,2021, Elapsed time: 0:00:46
+# Errors: 0, Warnings: 1
+do integration.do
+# vsim -gui work.int 
+# Start time: 23:19:58 on Jun 05,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1100 ps  Iteration: 3  Instance: /int/execution/u1/u1
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1200 ps  Iteration: 2  Instance: /int/execution/u1/u1
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1250 ps  Iteration: 4  Instance: /int/execution/u1/u1
+run
+run
+run
+# ** Fatal: (vsim-3734) Index value 2049 is out of range 0 to 2047.
+#    Time: 1600 ps  Iteration: 0  Process: /int/memory/u3/line__24 File: D:/SchoolWork/YearThree/Sem2/data_ram.vhd
+# Fatal error in Process line__24 at D:/SchoolWork/YearThree/Sem2/data_ram.vhd line 28
+# 
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+quit -sim
+# End time: 23:22:58 on Jun 05,2021, Elapsed time: 0:03:00
+# Errors: 1, Warnings: 14
+do integration.do
+# vsim -gui work.int 
+# Start time: 23:23:02 on Jun 05,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+force -deposit sim:/int/IO_PORT 10#55 0
+run
+run
+run
+run
+run
+run
+run
+run
+force -deposit sim:/int/IO_PORT 10#54 0
+run
+force -deposit sim:/int/IO_PORT 10#99 0
+run
+run
+run
+run
+run
+run
+# ** Fatal: (vsim-3734) Index value 2049 is out of range 0 to 2047.
+#    Time: 1600 ps  Iteration: 0  Process: /int/memory/u3/line__24 File: D:/SchoolWork/YearThree/Sem2/data_ram.vhd
+# Fatal error in Process line__24 at D:/SchoolWork/YearThree/Sem2/data_ram.vhd line 28
+# 
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+quit -sim
+# End time: 23:35:41 on Jun 05,2021, Elapsed time: 0:12:39
+# Errors: 1, Warnings: 11
+# Compile of data_ram.vhd failed with 1 errors.
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# 24 compiles, 0 failed with no errors.
+do integration.do
+# vsim -gui work.int 
+# Start time: 23:45:13 on Jun 05,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+run
+quit -sim
+# End time: 23:50:16 on Jun 05,2021, Elapsed time: 0:05:03
+# Errors: 0, Warnings: 13
+do test2OP.do
+# vsim -gui work.int 
+# Start time: 23:50:22 on Jun 05,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+quit -sim
+# End time: 23:50:47 on Jun 05,2021, Elapsed time: 0:00:25
+# Errors: 0, Warnings: 11
+do test2OP.do
+# vsim -gui work.int 
+# Start time: 23:51:24 on Jun 05,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+run
+run
+force -deposit sim:/int/IO_PORT 10#5 0
+run
+force -deposit sim:/int/IO_PORT 10#19 0
+run
+force -deposit sim:/int/IO_PORT 16#FFFFFFF 0
+run
+force -freeze sim:/int/IO_PORT 16#FFFFF320 0
+run
+noforce sim:/int/IO_PORT
+run
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3292 is not in bounds of subtype NATURAL.
+#    Time: 900 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3292 is not in bounds of subtype NATURAL.
+#    Time: 900 ps  Iteration: 3  Instance: /int/execution/u1/u1
+run
+run
+run
+quit -sim
+# End time: 23:58:39 on Jun 05,2021, Elapsed time: 0:07:15
+# Errors: 0, Warnings: 13
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd failed with 2 errors.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# 24 compiles, 1 failed with 2 errors.
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd failed with 1 errors.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# 24 compiles, 1 failed with 1 error.
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# 24 compiles, 0 failed with no errors.
+do test1OP.do
+# vsim -gui work.int 
+# Start time: 00:01:37 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+run
+run
+run
+run
+quit -sim
+# End time: 00:06:42 on Jun 06,2021, Elapsed time: 0:05:05
+# Errors: 0, Warnings: 14
+do test2OP.do
+# vsim -gui work.int 
+# Start time: 00:06:48 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+run
+run
+force -deposit sim:/int/IO_PORT 16#5 0
+run
+force -deposit sim:/int/IO_PORT 16#19 0
+run
+force -deposit sim:/int/IO_PORT 16#FFFFFFF 0
+run
+force -deposit sim:/int/IO_PORT 16#FFFFF320 0
+run
+run
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3292 is not in bounds of subtype NATURAL.
+#    Time: 900 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3292 is not in bounds of subtype NATURAL.
+#    Time: 900 ps  Iteration: 3  Instance: /int/execution/u1/u1
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# End time: 00:14:47 on Jun 06,2021, Elapsed time: 0:07:59
+# Errors: 0, Warnings: 13
+vsim -gui work.n_alu
+# vsim -gui work.n_alu 
+# Start time: 00:15:39 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.n_alu(a_alu)
+add wave -position insertpoint  \
+sim:/n_alu/Source \
+sim:/n_alu/Destination \
+sim:/n_alu/CCR_Out \
+sim:/n_alu/CCR \
+sim:/n_alu/Alu_Result \
+sim:/n_alu/ALU_OP
+force -freeze sim:/n_alu/Source 16#FFFFFFFF 0
+force -freeze sim:/n_alu/Destination 16#FFFFF325 0
+force -freeze sim:/n_alu/CCR 010 0
+force -freeze sim:/n_alu/ALU_OP 01010 0
+run
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /n_alu
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /n_alu
+force -freeze sim:/n_alu/Destination 16#FFFFFFFF 0
+force -freeze sim:/n_alu/Source 16#FFFFF325 0
+run
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3292 is not in bounds of subtype NATURAL.
+#    Time: 100 ps  Iteration: 0  Instance: /n_alu
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3292 is not in bounds of subtype NATURAL.
+#    Time: 100 ps  Iteration: 0  Instance: /n_alu
+quit -sim
+# End time: 00:19:56 on Jun 06,2021, Elapsed time: 0:04:17
+# Errors: 0, Warnings: 5
+do test2OP.do
+# vsim -gui work.int 
+# Start time: 00:20:02 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3292 is not in bounds of subtype NATURAL.
+#    Time: 900 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3292 is not in bounds of subtype NATURAL.
+#    Time: 900 ps  Iteration: 3  Instance: /int/execution/u1/u1
+add wave -position insertpoint  \
+sim:/int/execution/u1/source \
+sim:/int/execution/u1/destination
+quit -sim
+# End time: 00:23:39 on Jun 06,2021, Elapsed time: 0:03:37
+# Errors: 0, Warnings: 13
+do test2OP.do
+# vsim -gui work.int 
+# Start time: 00:23:49 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3292 is not in bounds of subtype NATURAL.
+#    Time: 900 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3292 is not in bounds of subtype NATURAL.
+#    Time: 900 ps  Iteration: 3  Instance: /int/execution/u1/u1
+quit -sim
+# End time: 00:32:31 on Jun 06,2021, Elapsed time: 0:08:42
+# Errors: 0, Warnings: 13
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd failed with 1 errors.
+# 24 compiles, 1 failed with 1 error.
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# 24 compiles, 0 failed with no errors.
+do test2OP.do
+# vsim -gui work.int 
+# Start time: 00:33:52 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3296 is not in bounds of subtype NATURAL.
+#    Time: 800 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3296 is not in bounds of subtype NATURAL.
+#    Time: 800 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3292 is not in bounds of subtype NATURAL.
+#    Time: 1 ns  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3292 is not in bounds of subtype NATURAL.
+#    Time: 1 ns  Iteration: 3  Instance: /int/execution/u1/u1
+add wave -position insertpoint  \
+sim:/int/execution/u1/u1/Source \
+sim:/int/execution/u1/u1/Destination \
+sim:/int/execution/u1/u1/Alu_Result \
+sim:/int/execution/u1/u1/ALU_OP
+quit -sim
+# End time: 00:38:12 on Jun 06,2021, Elapsed time: 0:04:20
+# Errors: 0, Warnings: 17
+do test2OP.do
+# vsim -gui work.int 
+# Start time: 00:38:15 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3296 is not in bounds of subtype NATURAL.
+#    Time: 800 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3296 is not in bounds of subtype NATURAL.
+#    Time: 800 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3292 is not in bounds of subtype NATURAL.
+#    Time: 1 ns  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3292 is not in bounds of subtype NATURAL.
+#    Time: 1 ns  Iteration: 3  Instance: /int/execution/u1/u1
+quit -sim
+# End time: 00:40:38 on Jun 06,2021, Elapsed time: 0:02:23
+# Errors: 0, Warnings: 15
+do test2OP.do
+# vsim -gui work.int 
+# Start time: 00:40:44 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 700 ps  Iteration: 4  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 700 ps  Iteration: 4  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3296 is not in bounds of subtype NATURAL.
+#    Time: 800 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3296 is not in bounds of subtype NATURAL.
+#    Time: 800 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 900 ps  Iteration: 4  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 900 ps  Iteration: 4  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 1 ns  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 1 ns  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3292 is not in bounds of subtype NATURAL.
+#    Time: 1 ns  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3292 is not in bounds of subtype NATURAL.
+#    Time: 1 ns  Iteration: 3  Instance: /int/execution/u1/u1
+quit -sim
+# End time: 00:42:29 on Jun 06,2021, Elapsed time: 0:01:45
+# Errors: 0, Warnings: 21
+do testMem.do
+# vsim -gui work.int 
+# Start time: 00:49:56 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+run
+run
+force -deposit sim:/int/IO_PORT 16#19 0
+run
+force -deposit sim:/int/IO_PORT 16#FFFF 0
+run
+force -deposit sim:/int/IO_PORT 16#F320 0
+run
+run
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 900 ps  Iteration: 3  Instance: /int/execution/u1/u1
+run
+run
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1200 ps  Iteration: 2  Instance: /int/execution/u1/u1
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1300 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1300 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1300 ps  Iteration: 3  Instance: /int/execution/u1/u1
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1400 ps  Iteration: 4  Instance: /int/execution/u1/u1
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1500 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1500 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1500 ps  Iteration: 3  Instance: /int/execution/u1/u1
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1600 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1600 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1600 ps  Iteration: 2  Instance: /int/execution/u1/u1
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1700 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1700 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1700 ps  Iteration: 2  Instance: /int/execution/u1/u1
+run
+run
+run
+run
+quit -sim
+# End time: 00:57:36 on Jun 06,2021, Elapsed time: 0:07:40
+# Errors: 0, Warnings: 26
+do testMem.do
+# vsim -gui work.int 
+# Start time: 00:58:05 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 900 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1200 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1300 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1300 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1300 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1400 ps  Iteration: 4  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1500 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1500 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1500 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1600 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1600 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1600 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1700 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1700 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1700 ps  Iteration: 2  Instance: /int/execution/u1/u1
+quit -sim
+# End time: 01:03:20 on Jun 06,2021, Elapsed time: 0:05:15
+# Errors: 0, Warnings: 26
+do testMem.do
+# vsim -gui work.int 
+# Start time: 01:03:36 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 900 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1200 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1300 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1300 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1300 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1400 ps  Iteration: 4  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1500 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1500 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1500 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1600 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1600 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1600 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1700 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1700 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1700 ps  Iteration: 2  Instance: /int/execution/u1/u1
+quit -sim
+# End time: 01:10:54 on Jun 06,2021, Elapsed time: 0:07:18
+# Errors: 0, Warnings: 26
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# 24 compiles, 0 failed with no errors.
+do testMem.do
+# vsim -gui work.int 
+# Start time: 01:11:31 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1300 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1300 ps  Iteration: 4  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1300 ps  Iteration: 4  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1300 ps  Iteration: 4  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1400 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1400 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1400 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1500 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1500 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1500 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1600 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1600 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1600 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1700 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1700 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1700 ps  Iteration: 2  Instance: /int/execution/u1/u1
+quit -sim
+# End time: 01:13:59 on Jun 06,2021, Elapsed time: 0:02:28
+# Errors: 0, Warnings: 28
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# 24 compiles, 0 failed with no errors.
+do testMem.do
+# vsim -gui work.int 
+# Start time: 01:14:37 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Fatal: (vsim-3734) Index value 2049 is out of range 0 to 2047.
+#    Time: 900 ps  Iteration: 0  Process: /int/memory/u3/line__24 File: D:/SchoolWork/YearThree/Sem2/data_ram.vhd
+# Fatal error in Process line__24 at D:/SchoolWork/YearThree/Sem2/data_ram.vhd line 28
+# 
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+quit -sim
+# End time: 01:14:57 on Jun 06,2021, Elapsed time: 0:00:20
+# Errors: 1, Warnings: 12
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# 24 compiles, 0 failed with no errors.
+do testMem.do
+# vsim -gui work.int 
+# Start time: 01:15:34 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Fatal: (vsim-3734) Index value 2049 is out of range 0 to 2047.
+#    Time: 900 ps  Iteration: 0  Process: /int/memory/u3/line__24 File: D:/SchoolWork/YearThree/Sem2/data_ram.vhd
+# Fatal error in Process line__24 at D:/SchoolWork/YearThree/Sem2/data_ram.vhd line 28
+# 
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+quit -sim
+# End time: 01:15:53 on Jun 06,2021, Elapsed time: 0:00:19
+# Errors: 1, Warnings: 12
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# 24 compiles, 0 failed with no errors.
+do testMem.do
+# vsim -gui work.int 
+# Start time: 01:16:25 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Fatal: (vsim-3734) Index value 2049 is out of range 0 to 2047.
+#    Time: 900 ps  Iteration: 0  Process: /int/memory/u3/line__24 File: D:/SchoolWork/YearThree/Sem2/data_ram.vhd
+# Fatal error in Process line__24 at D:/SchoolWork/YearThree/Sem2/data_ram.vhd line 28
+# 
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+quit -sim
+# End time: 01:17:03 on Jun 06,2021, Elapsed time: 0:00:38
+# Errors: 1, Warnings: 12
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# 24 compiles, 0 failed with no errors.
+do testMem.do
+# vsim -gui work.int 
+# Start time: 01:18:45 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Fatal: (vsim-3734) Index value 2049 is out of range 0 to 2047.
+#    Time: 900 ps  Iteration: 0  Process: /int/memory/u3/line__24 File: D:/SchoolWork/YearThree/Sem2/data_ram.vhd
+# Fatal error in Process line__24 at D:/SchoolWork/YearThree/Sem2/data_ram.vhd line 28
+# 
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/SchoolWork/YearThree/Sem2/data_ram.vhd 28 Process line__24
+# 
+quit -sim
+# End time: 01:19:31 on Jun 06,2021, Elapsed time: 0:00:46
+# Errors: 1, Warnings: 12
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# 24 compiles, 0 failed with no errors.
+do testMem.do
+# vsim -gui work.int 
+# Start time: 01:20:27 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1300 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1300 ps  Iteration: 4  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1300 ps  Iteration: 4  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1300 ps  Iteration: 4  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1500 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1500 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1500 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1600 ps  Iteration: 2  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1600 ps  Iteration: 2  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1600 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1600 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1600 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 1700 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1700 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1700 ps  Iteration: 2  Instance: /int/execution/u1/u1
+quit -sim
+# End time: 01:26:45 on Jun 06,2021, Elapsed time: 0:06:18
+# Errors: 0, Warnings: 27
+do testMem.do
+# vsim -gui work.int 
+# Start time: 01:27:06 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+force -freeze sim:/int/IO_PORT 16#10 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# End time: 01:34:09 on Jun 06,2021, Elapsed time: 0:07:03
+# Errors: 0, Warnings: 11
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# 24 compiles, 0 failed with no errors.
+do testMem
+# Cannot open macro file: testMem
+do testMem.do
+# vsim -gui work.int 
+# Start time: 01:42:46 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+add wave -position insertpoint  \
+sim:/int/memory/u3/address
+add wave -position insertpoint  \
+sim:/int/memory/u3/we
+add wave -position insertpoint  \
+sim:/int/memory/u3/datain
+add wave -position insertpoint  \
+sim:/int/memory/u3/dataout
+quit -sim
+# End time: 01:47:28 on Jun 06,2021, Elapsed time: 0:04:42
+# Errors: 0, Warnings: 14
+do testMem.do
+# vsim -gui work.int 
+# Start time: 01:47:33 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+quit -sim
+# End time: 01:51:25 on Jun 06,2021, Elapsed time: 0:03:52
+# Errors: 0, Warnings: 13
+do testMem.do
+# vsim -gui work.int 
+# Start time: 01:52:04 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+quit -sim
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# 24 compiles, 0 failed with no errors.
+# End time: 02:00:35 on Jun 06,2021, Elapsed time: 0:08:31
+# Errors: 0, Warnings: 14
+do testMem.do
+# vsim -gui work.int 
+# Start time: 02:00:51 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+quit -sim
+# End time: 02:11:34 on Jun 06,2021, Elapsed time: 0:10:43
+# Errors: 0, Warnings: 13
+# Compile of fetch_interface.vhd failed with 1 errors.
+# Compile of fetch_interface.vhd failed with 3 errors.
+# Compile of fetch_interface.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# Compile of fetch_interface.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+do testMem.do
+# vsim -gui work.int 
+# Start time: 02:21:30 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.fetch_int(a_fetch_int)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+quit -sim
+# End time: 02:27:46 on Jun 06,2021, Elapsed time: 0:06:16
+# Errors: 0, Warnings: 18
+do testMem.do
+# vsim -gui work.int 
+# Start time: 02:28:40 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.fetch_int(a_fetch_int)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+add wave -position insertpoint  \
+sim:/int/fetching/IR
+quit -sim
+# End time: 03:26:12 on Jun 06,2021, Elapsed time: 0:57:32
+# Errors: 0, Warnings: 13
+do testMem.do
+# vsim -gui work.int 
+# Start time: 03:26:17 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.fetch_int(a_fetch_int)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+quit -sim
+# End time: 03:27:55 on Jun 06,2021, Elapsed time: 0:01:38
+# Errors: 0, Warnings: 13
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# Compile of fetch_interface.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+do testMem.do
+# vsim -gui work.int 
+# Start time: 03:47:55 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.fetch_int(a_fetch_int)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+quit -sim
+# End time: 04:00:30 on Jun 06,2021, Elapsed time: 0:12:35
+# Errors: 0, Warnings: 14
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# Compile of fetch_interface.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+do testMem.do
+# vsim -gui work.int 
+# Start time: 04:00:47 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.fetch_int(a_fetch_int)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+quit -sim
+# End time: 04:01:32 on Jun 06,2021, Elapsed time: 0:00:45
+# Errors: 0, Warnings: 14
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# Compile of fetch_interface.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+do testMem.do
+# vsim -gui work.int 
+# Start time: 04:07:28 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.fetch_int(a_fetch_int)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+quit -sim
+# End time: 04:08:27 on Jun 06,2021, Elapsed time: 0:00:59
+# Errors: 0, Warnings: 14
+do testMem.do
+# vsim -gui work.int 
+# Start time: 04:09:12 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.fetch_int(a_fetch_int)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+quit -sim
+# End time: 04:09:27 on Jun 06,2021, Elapsed time: 0:00:15
+# Errors: 0, Warnings: 13
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# Compile of fetch_interface.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+do testMem.do
+# vsim -gui work.int 
+# Start time: 04:09:37 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.fetch_int(a_fetch_int)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+quit -sim
+# End time: 04:11:51 on Jun 06,2021, Elapsed time: 0:02:14
+# Errors: 0, Warnings: 14
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd failed with 2 errors.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# Compile of fetch_interface.vhd was successful.
+# 25 compiles, 1 failed with 2 errors.
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd failed with 2 errors.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# Compile of fetch_interface.vhd was successful.
+# 25 compiles, 1 failed with 2 errors.
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# Compile of fetch_interface.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+# Load canceled
+do testMem.do
+# vsim -gui work.int 
+# Start time: 04:14:36 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.fetch_int(a_fetch_int)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+quit -sim
+# End time: 04:15:59 on Jun 06,2021, Elapsed time: 0:01:23
+# Errors: 0, Warnings: 16
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# Compile of fetch_interface.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+do testMem.do
+# vsim -gui work.int 
+# Start time: 04:18:24 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.fetch_int(a_fetch_int)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+quit -sim
+# End time: 04:45:37 on Jun 06,2021, Elapsed time: 0:27:13
+# Errors: 0, Warnings: 14
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# Compile of fetch_interface.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+# Compile of alu.vhd was successful.
+# Compile of alu_stage_integration.vhd was successful.
+# Compile of alu_stage_logic.vhd was successful.
+# Compile of Buffer.vhdl was successful.
+# Compile of ccr_register.vhd was successful.
+# Compile of ControlUnit.vhdl was successful.
+# Compile of data_ram.vhd was successful.
+# Compile of dec_ex_int.vhd was successful.
+# Compile of DecodingStage.vhdl was successful.
+# Compile of EX_M_register.vhd was successful.
+# Compile of Fetching Stage.vhd was successful.
+# Compile of forwarding_hazard_unit.vhd was successful.
+# Compile of forwarding_unit.vhd was successful.
+# Compile of hazard_detection.vhd was successful.
+# Compile of Integration.vhdl was successful.
+# Compile of M_WB_register.vhd was successful.
+# Compile of memory_stage.vhd was successful.
+# Compile of memory_stage_integration.vhd was successful.
+# Compile of Ram.vhdl was successful.
+# Compile of Register.vhdl was successful.
+# Compile of RegisterFile.vhdl was successful.
+# Compile of sp_register.vhd was successful.
+# Compile of triStateBuffer.vhdl was successful.
+# Compile of int.vhd was successful.
+# Compile of fetch_interface.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+do testMem.do
+# vsim -gui work.int 
+# Start time: 04:54:04 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.fetch_int(a_fetch_int)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+quit -sim
+# End time: 04:57:48 on Jun 06,2021, Elapsed time: 0:03:44
+# Errors: 0, Warnings: 15
+do test1OP.do
+# vsim -gui work.int 
+# Start time: 04:58:13 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.fetch_int(a_fetch_int)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+quit -sim
+# End time: 04:59:20 on Jun 06,2021, Elapsed time: 0:01:07
+# Errors: 0, Warnings: 13
+do test2OP.do
+# vsim -gui work.int 
+# Start time: 04:59:24 on Jun 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.int(a_int)
+# Loading work.fetchingstage(fetch)
+# Loading work.ram(syncrama)
+# Loading work.stagebuffer(sb)
+# Loading work.fetch_int(a_fetch_int)
+# Loading work.decodingstage(decode)
+# Loading work.controlunit(cu)
+# Loading work.registerfile(regfile)
+# Loading work.my_ndff(a_my_ndff)
+# Loading work.tri_state_buffer(my_tri_state_buffer)
+# Loading work.dec_ex_int(a_dec_ex_int)
+# Loading work.alu_stage_integration(a_alu_stage_integration)
+# Loading work.n_alu_logic(a_alu_logic)
+# Loading work.n_alu(a_alu)
+# Loading work.ccr_register(a_ccr_register)
+# Loading work.ex_m_register(a_ex_m_register)
+# Loading work.memory_stage_integration(a_memory_stage_integration)
+# Loading work.n_mem(a_mem)
+# Loading work.m_wb_register(a_m_wb_register)
+# Loading work.data_ram(syncrama)
+# Loading work.sp_register(a_sp_register)
+# Loading work.forwarding_hazard_unit(a_forwarding_hazard_unit)
+# Loading work.hazard_detection(a_hazard_detection)
+# Loading work.forwarding_unit(a_forwarding_unit)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /int/memory/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 700 ps  Iteration: 4  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 700 ps  Iteration: 4  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3296 is not in bounds of subtype NATURAL.
+#    Time: 800 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3296 is not in bounds of subtype NATURAL.
+#    Time: 800 ps  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 900 ps  Iteration: 4  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 900 ps  Iteration: 4  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 1 ns  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 1 ns  Iteration: 2  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3292 is not in bounds of subtype NATURAL.
+#    Time: 1 ns  Iteration: 3  Instance: /int/execution/u1/u1
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -3292 is not in bounds of subtype NATURAL.
+#    Time: 1 ns  Iteration: 3  Instance: /int/execution/u1/u1
+quit -sim
+# End time: 05:00:32 on Jun 06,2021, Elapsed time: 0:01:08
+# Errors: 0, Warnings: 23

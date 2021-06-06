@@ -35,6 +35,27 @@ ARCHITECTURE int OF integration IS
            ControlSignalsM : Out std_logic_vector(5 DOWNTO 0));
     END  COMPONENT;
 
+	COMPONENT dec_ex_int IS
+    PORT(
+		clk: IN std_logic;
+		ExtendedOffset_IN : IN std_logic_vector(31 DOWNTO 0);
+		ExtendedOffset : Out std_logic_vector(31 DOWNTO 0);
+		Rsrc_IN : IN std_logic_vector(31 DOWNTO 0);
+		Rsrc : Out std_logic_vector(31 DOWNTO 0);
+		Rdst_IN : IN std_logic_vector(31 DOWNTO 0);
+		Rdst : Out std_logic_vector(31 DOWNTO 0);
+		DstBitsOut_IN : IN std_logic_vector(2 DOWNTO 0);
+		DstBitsOut : Out std_logic_vector(2 DOWNTO 0);
+		SrcBitsOut_IN : IN std_logic_vector(2 DOWNTO 0);
+		SrcBitsOut : Out std_logic_vector(2 DOWNTO 0);
+		ControlSignalsEX_IN : IN std_logic_vector(5 DOWNTO 0);
+		ControlSignalsEX : Out std_logic_vector(5 DOWNTO 0);
+		ControlSignalsWB_IN : IN std_logic;
+		ControlSignalsWB : Out std_logic;
+		ControlSignalsM_IN : IN std_logic_vector(5 DOWNTO 0);
+		ControlSignalsM : Out std_logic_vector(5 DOWNTO 0));
+    END  COMPONENT;
+
     COMPONENT alu_stage_integration IS
     PORT(
 		clk: IN std_logic;
@@ -125,6 +146,17 @@ ARCHITECTURE int OF integration IS
 	signal ControlSignalsEX : std_logic_vector(5 DOWNTO 0);
 	signal ControlSignalsWB : std_logic;
 	signal ControlSignalsM : std_logic_vector(5 DOWNTO 0);
+
+	--Interface Signals
+	signal ExtendedOffset_int : std_logic_vector(31 DOWNTO 0);
+	signal RsrcDec_int : std_logic_vector(31 DOWNTO 0);
+	signal RdstDec_int : std_logic_vector(31 DOWNTO 0);
+	signal DstBitsDec_int : std_logic_vector(2 DOWNTO 0);
+	signal SrcBitsDec_int : std_logic_vector(2 DOWNTO 0);
+	signal ControlSignalsEX_int : std_logic_vector(5 DOWNTO 0);
+	signal ControlSignalsWB_int : std_logic;
+	signal ControlSignalsM_int : std_logic_vector(5 DOWNTO 0);
+
 	--Execution Signals
 	signal CS_WB_EX:  std_logic;
 	signal CS_MEM_EX:  std_logic_vector(5 DOWNTO 0);
@@ -151,8 +183,9 @@ BEGIN
 
 fecthing: fetchingStage PORT map(HazardDetection,Clk,Rst,Offset,OpCode ,SrcBitsFetch ,DstBitsFetch);
 decoding: decodingStage PORT map(Clk,Rst ,Offset ,OpCode ,SrcBitsFetch ,DstBitsFetch ,DstBitsWrite,HazardDetection ,ControlSignalsWBIN ,WriteBackData ,ExtendedOffset ,RsrcDec ,RdstDec ,DstBitsDec ,SrcBitsDec ,ControlSignalsEX ,ControlSignalsWB ,ControlSignalsM );
-execution: alu_stage_integration PORT map(Clk, Rst , ControlSignalsWB , ControlSignalsM ,ControlSignalsEX,RsrcDec,RdstDec,DstBitsDec,ExtendedOffset,SPMem,forward_source,forward_destination,RdstEX,WriteBackData,CS_WB_EX,CS_MEM_EX,RsrcEX,RdstEX,DstBits_EX,offset_EX,ALU_RESULT,SP_EX);
+interface: dec_ex_int PORT map (Clk,ExtendedOffset ,ExtendedOffset_int ,RsrcDec ,RsrcDec_int ,RdstDec ,RdstDec_int,DstBitsDec ,DstBitsDec_int ,SrcBitsDec ,SrcBitsDec_int,ControlSignalsEX ,ControlSignalsEX_int,ControlSignalsWB ,ControlSignalsWB_int ,ControlSignalsM ,ControlSignalsM_int);
+execution: alu_stage_integration PORT map(Clk, Rst , ControlSignalsWB_int , ControlSignalsM_int ,ControlSignalsEX_int,RsrcDec_int,RdstDec_int,DstBitsDec_int,ExtendedOffset_int,SPMem,forward_source,forward_destination,RdstEX,WriteBackData,CS_WB_EX,CS_MEM_EX,RsrcEX,RdstEX,DstBits_EX,offset_EX,ALU_RESULT,SP_EX);
 memory: memory_stage_integration PORT map(Clk ,Rst,CS_WB_EX,CS_MEM_EX ,DstBits_EX ,RsrcEX ,offset_EX ,ALU_RESULT ,SP_EX,IOPort ,IOPort ,ControlSignalsWBIN ,WriteBackData ,DstBitsWrite ,SPMem );
-hazards: forwarding_hazard_unit PORT map(OpCode,SrcBitsFetch,DstBitsFetch,ControlSignalsM(5),ControlSignalsM(3),ControlSignalsM(4),SrcBitsDec,DstBitsDec,CS_WB_EX,DstBits_EX ,ControlSignalsWBIN,DstBitsWrite,forward_source,forward_destination,HazardDetection);
+hazards: forwarding_hazard_unit PORT map(OpCode,SrcBitsFetch,DstBitsFetch,ControlSignalsM_int(5),ControlSignalsM_int(3),ControlSignalsM_int(4),SrcBitsDec_int,DstBitsDec_int,CS_WB_EX,DstBits_EX ,ControlSignalsWBIN,DstBitsWrite,forward_source,forward_destination,HazardDetection);
 
 END int;

@@ -16,6 +16,9 @@ ARCHITECTURE a_alu OF n_alu IS
 
 SIGNAL intermediate_out: std_logic_vector(31 DOWNTO 0);
 SIGNAL addition_result: std_logic_vector(32 DOWNTO 0);
+SIGNAL increment_result: std_logic_vector(32 DOWNTO 0);
+SIGNAL decrement_result: std_logic_vector(32 DOWNTO 0);
+SIGNAL negate_result: std_logic_vector(32 DOWNTO 0);
 SIGNAL shift_left_result: std_logic_vector(32 DOWNTO 0);
 SIGNAL shift_right_result: std_logic_vector(32 DOWNTO 0);
 SIGNAL zero_flag_result: std_logic;
@@ -25,6 +28,9 @@ SIGNAL carry_flag_result: std_logic;
 BEGIN
 
 	addition_result <= std_logic_vector(unsigned(('0' & Source)) + unsigned(('0' & Destination)));
+	increment_result <= std_logic_vector(unsigned(('0' & Destination)) + 1);
+	decrement_result <= std_logic_vector(unsigned(('0' & Destination)) - 1);
+	negate_result <= std_logic_vector(unsigned(NOT(('0' & Destination))) + 1);
 	shift_left_result <= std_logic_vector(shift_left(unsigned(('0' & Destination)), to_integer(unsigned(Source))));
 	shift_right_result <= std_logic_vector(shift_right(unsigned(('0' & Destination)), to_integer(unsigned(Source))));
 
@@ -34,9 +40,9 @@ BEGIN
 		ELSE Destination WHEN ALU_OP = "00011"
 		ELSE (OTHERS => '0') WHEN ALU_OP = "00100"
 		ELSE (NOT Destination) WHEN ALU_OP = "00101"
-		ELSE std_logic_vector(unsigned(Destination) + 1) WHEN ALU_OP = "00110"
-		ELSE std_logic_vector(unsigned(Destination) - 1) WHEN ALU_OP = "00111"
-		ELSE std_logic_vector(unsigned((NOT Destination)) + 1) WHEN ALU_OP = "01000"
+		ELSE increment_result(31 DOWNTO 0) WHEN ALU_OP = "00110"
+		ELSE decrement_result(31 DOWNTO 0) WHEN ALU_OP = "00111"
+		ELSE negate_result(31 DOWNTO 0) WHEN ALU_OP = "01000"
 		ELSE addition_result(31 DOWNTO 0) WHEN ALU_OP = "01001"
 		ELSE std_logic_vector(unsigned(Source) - unsigned(Destination)) WHEN ALU_OP = "01010"
 		ELSE (Source AND Destination) WHEN ALU_OP = "01011"
@@ -96,9 +102,9 @@ BEGIN
 		ELSE '0' WHEN ALU_OP = "00011"
 		ELSE CCR(2) WHEN ALU_OP = "00100"
 		ELSE CCR(2) WHEN ALU_OP = "00101"
-		ELSE CCR(2) WHEN ALU_OP = "00110"
-		ELSE CCR(2) WHEN ALU_OP = "00111"
-		ELSE CCR(2) WHEN ALU_OP = "01000"
+		ELSE increment_result(32) WHEN ALU_OP = "00110"
+		ELSE decrement_result(32) WHEN ALU_OP = "00111"
+		ELSE negate_result(32) WHEN ALU_OP = "01000"
 		ELSE addition_result(32) WHEN ALU_OP = "01001"
 		ELSE carry_flag_result WHEN ALU_OP = "01010"
 		ELSE CCR(2) WHEN ALU_OP = "01011"
