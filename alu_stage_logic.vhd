@@ -15,7 +15,9 @@ ENTITY n_alu_logic IS
 		Rdst_WB: IN std_logic_vector(31 DOWNTO 0);
 		CCR: IN std_logic_vector(2 DOWNTO 0);
 		CCR_OUT: OUT std_logic_vector(2 DOWNTO 0);
-		ALU_RESULT: OUT std_logic_vector(31 DOWNTO 0)
+		ALU_RESULT: OUT std_logic_vector(31 DOWNTO 0);
+		SrcFinal: OUT std_logic_vector(31 DOWNTO 0);
+		DstFinal: OUT std_logic_vector(31 DOWNTO 0)
 	);
 END n_alu_logic;
 
@@ -47,6 +49,9 @@ BEGIN
 	destination <= Rdst WHEN Forward_Destination = "00"
 		ELSE Rdst_MEM WHEN Forward_Destination = "01"
 		ELSE Rdst_WB WHEN Forward_Destination = "10";
+
+	SrcFinal <= source;
+	DstFinal <= destination; 	
 
 	u1: n_alu PORT MAP (CCR, CS_ALU_OPERATION, source, destination, ALU_RESULT, CCR_OUT);
 

@@ -94,6 +94,15 @@ ARCHITECTURE a_memory_stage_integration OF memory_stage_integration IS
 	SIGNAL SP : STD_LOGIC_VECTOR(31 DOWNTO 0);
 	SIGNAL SP_UPDATED : STD_LOGIC_VECTOR(31 DOWNTO 0);
 	SIGNAL DATA_OUT_TRISTATE_EN : STD_LOGIC;
+	SIGNAL CatchHazard : STD_LOGIC_VECTOR(31 DOWNTO 0);
+	Signal DataIn : STD_LOGIC_VECTOR(31 DOWNTO 0);
+	signal Flag :STD_LOGIC;
+	signal Flag2 :STD_LOGIC;
+	signal Counter :STD_LOGIC_vector(3 downto 0) := "0000";
+	signal RsrcTemp : STD_LOGIC_VECTOR(31 DOWNTO 0);
+	signal RsrcFinal : STD_LOGIC_VECTOR(31 DOWNTO 0);
+
+	
 BEGIN
 
 	DATA_OUT_TRISTATE_EN <= '1' WHEN CS_MEM_IN(5) = '1' AND CS_MEM_IN(4) = '1'
@@ -101,11 +110,26 @@ BEGIN
 		'0';
 	-- DATA_OUT_TRISTATE_EN <= CS_MEM_IN(5) = '1' AND CS_MEM_IN(4) = '1';
 
+	CatchHazard <= ALU_RESULT when CS_MEM_IN ="000000";
+
+	Flag<='1' when  (CS_MEM_IN ="000000" or (CS_MEM_IN ="101010" and dstbits_IN ="010"))
+	else '0';
+	Flag2<='1' when  (CS_MEM_IN ="000000" or (CS_MEM_IN ="101010"))
+	else '0';
+
+	DataIn<= CatchHazard when Flag='1'
+	else ALU_RESULT;
+
+	RsrcFinal<= "00000000000000000000000000010000" when Flag2='1'
+	else Rsrc_IN;
+
+
+
 	SP_OUT <= SP;
-	u1 : n_mem PORT MAP(CS_MEM_IN, Rsrc_IN, offset_IN, ALU_RESULT, RAM_READ_DATA, BUS_IN, SP_BUFFERED_IN, SP, SP_UPDATED, RAM_ADDRESS, WB_DATA_IN, RAM_WE);
+	u1 : n_mem PORT MAP(CS_MEM_IN, RsrcFinal, offset_IN, DataIn, RAM_READ_DATA, BUS_IN, SP_BUFFERED_IN, SP, SP_UPDATED, RAM_ADDRESS, WB_DATA_IN, RAM_WE);
 	u2 : m_wb_register PORT MAP(clk, rst, CS_WB_IN, CS_WB_OUT, WB_DATA_IN, WB_DATA_OUT, dstbits_OUT, dstbits_IN);
-	u3 : data_ram PORT MAP(clk, RAM_WE, RAM_ADDRESS, ALU_RESULT, RAM_READ_DATA);
+	u3 : data_ram PORT MAP(clk, RAM_WE, RAM_ADDRESS, DataIn, RAM_READ_DATA);
 	u4 : sp_register PORT MAP(CS_MEM_IN(0), clk, rst, SP_UPDATED, SP);
-	u5 : tri_state_buffer PORT MAP(DATA_OUT_TRISTATE_EN, ALU_RESULT, BUS_OUT);
+	u5 : tri_state_buffer PORT MAP(DATA_OUT_TRISTATE_EN, DataIn, BUS_OUT);
 
 END a_memory_stage_integration;

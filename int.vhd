@@ -157,7 +157,8 @@ COMPONENT forwarding_hazard_unit IS
 		forward_destination: OUT std_logic_vector(1 DOWNTO 0);
 		hazard_detected: OUT std_logic
 	);
-END COMPONENT;
+	END COMPONENT;
+
 
 -- Out from fetching
 signal fetch_Offset :  std_logic_vector(15 DOWNTO 0);
@@ -226,5 +227,6 @@ BEGIN
 	memory: memory_stage_integration PORT MAP (clk, rst, ex_CS_WB_OUT, ex_CS_MEM_OUT, ex_DstBits_OUT, ex_Rsrc_OUT, ex_offset_OUT, ex_ALU_RESULT, ex_SP_OUT, IO_PORT, IO_PORT, mem_CS_WB_OUT, mem_WB_DATA_OUT, mem_dstbits_OUT, mem_SP_OUT);
 
 	forward_hazard: forwarding_hazard_unit PORT MAP (fetch_int_IF_ID_OP_CODE_OUT, fetch_int_IF_ID_src_bits_OUT, fetch_int_IF_ID_dst_bits_OUT, int_ControlSignalsM(5), int_ControlSignalsM(3), int_ControlSignalsM(4), int_SrcBitsOut, int_DstBitsOut, ex_CS_WB_OUT, ex_DstBits_OUT, mem_CS_WB_OUT, mem_dstbits_OUT, forward_source, forward_destination, hazard_detected);
+
 
 END a_int;

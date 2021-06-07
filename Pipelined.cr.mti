@@ -1,4 +1,13 @@
-E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/ccr_register.vhd {1 {vcom -work work -2002 -explicit -stats=none E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/ccr_register.vhd
+E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/memory_stage.vhd {1 {vcom -work work -2002 -explicit -stats=none E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/memory_stage.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity n_mem
+-- Compiling architecture a_mem of n_mem
+
+} {} {}} E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/ccr_register.vhd {1 {vcom -work work -2002 -explicit -stats=none E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/ccr_register.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -7,14 +16,13 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity ccr_register
 -- Compiling architecture a_ccr_register of ccr_register
 
-} {} {}} E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/memory_stage.vhd {1 {vcom -work work -2002 -explicit -stats=none E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/memory_stage.vhd
+} {} {}} E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/DecodingStage.vhdl {1 {vcom -work work -2002 -explicit -stats=none E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/DecodingStage.vhdl
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity n_mem
--- Compiling architecture a_mem of n_mem
+-- Compiling entity decodingStage
+-- Compiling architecture decode of decodingStage
 
 } {} {}} E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/EX_M_register.vhd {1 {vcom -work work -2002 -explicit -stats=none E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/EX_M_register.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -24,14 +32,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package NUMERIC_STD
 -- Compiling entity ex_m_register
 -- Compiling architecture a_ex_m_register of ex_m_register
-
-} {} {}} E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/DecodingStage.vhdl {1 {vcom -work work -2002 -explicit -stats=none E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/DecodingStage.vhdl
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity decodingStage
--- Compiling architecture decode of decodingStage
 
 } {} {}} E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/Buffer.vhdl {1 {vcom -work work -2002 -explicit -stats=none E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/Buffer.vhdl
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -50,15 +50,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity sp_register
 -- Compiling architecture a_sp_register of sp_register
 
-} {} {}} E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/Integration.vhdl {1 {vcom -work work -2002 -explicit -stats=none E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/Integration.vhdl
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity integration
--- Compiling architecture int of integration
-
 } {} {}} E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/alu_stage_integration.vhd {1 {vcom -work work -2002 -explicit -stats=none E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/alu_stage_integration.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -67,6 +58,15 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package NUMERIC_STD
 -- Compiling entity alu_stage_integration
 -- Compiling architecture a_alu_stage_integration of alu_stage_integration
+
+} {} {}} E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/Integration.vhdl {1 {vcom -work work -2002 -explicit -stats=none E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/Integration.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity integration
+-- Compiling architecture int of integration
 
 } {} {}} E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/RegisterFile.vhdl {1 {vcom -work work -2002 -explicit -stats=none E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/RegisterFile.vhdl
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -83,6 +83,15 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package std_logic_1164
 -- Compiling entity my_nDFF
 -- Compiling architecture a_my_nDFF of my_nDFF
+
+} {} {}} E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/fetch_interface.vhd {1 {vcom -work work -2002 -explicit -stats=none E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/fetch_interface.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity fetch_int
+-- Compiling architecture a_fetch_int of fetch_int
 
 } {} {}} E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/alu.vhd {1 {vcom -work work -2002 -explicit -stats=none E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/alu.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -102,15 +111,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity forwarding_unit
 -- Compiling architecture a_forwarding_unit of forwarding_unit
 
-} {} {}} E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/Ram.vhdl {1 {vcom -work work -2002 -explicit -stats=none E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/Ram.vhdl
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity ram
--- Compiling architecture syncrama of ram
-
 } {} {}} {E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/Fetching Stage.vhd} {1 {vcom -work work -2002 -explicit -stats=none {E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/Fetching Stage.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -119,6 +119,15 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package NUMERIC_STD
 -- Compiling entity fetchingStage
 -- Compiling architecture fetch of fetchingStage
+
+} {} {}} E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/Ram.vhdl {1 {vcom -work work -2002 -explicit -stats=none E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/Ram.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ram
+-- Compiling architecture syncrama of ram
 
 } {} {}} E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/ControlUnit.vhdl {1 {vcom -work work -2002 -explicit -stats=none E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/ControlUnit.vhdl
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -154,15 +163,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity hazard_detection
 -- Compiling architecture a_hazard_detection of hazard_detection
 
-} {} {}} E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/data_ram.vhd {1 {vcom -work work -2002 -explicit -stats=none E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/data_ram.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity data_ram
--- Compiling architecture syncrama of data_ram
-
 } {} {}} E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/M_WB_register.vhd {1 {vcom -work work -2002 -explicit -stats=none E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/M_WB_register.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -171,6 +171,15 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package NUMERIC_STD
 -- Compiling entity m_wb_register
 -- Compiling architecture a_m_wb_register of m_wb_register
+
+} {} {}} E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/data_ram.vhd {1 {vcom -work work -2002 -explicit -stats=none E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/data_ram.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity data_ram
+-- Compiling architecture syncrama of data_ram
 
 } {} {}} E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/alu_stage_logic.vhd {1 {vcom -work work -2002 -explicit -stats=none E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/alu_stage_logic.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -189,6 +198,15 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package NUMERIC_STD
 -- Compiling entity dec_ex_int
 -- Compiling architecture a_dec_ex_int of dec_ex_int
+
+} {} {}} E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/int.vhd {1 {vcom -work work -2002 -explicit -stats=none E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/int.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity int
+-- Compiling architecture a_int of int
 
 } {} {}} E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/forwarding_hazard_unit.vhd {1 {vcom -work work -2002 -explicit -stats=none E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/forwarding_hazard_unit.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016

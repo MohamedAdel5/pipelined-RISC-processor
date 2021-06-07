@@ -1,5 +1,5 @@
 vsim -gui work.int
-mem load -i D:/SchoolWork/YearThree/Sem2/test1Out.mem /int/fetching/my_ram/ram
+mem load -i E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/test1Out.mem /int/fetching/my_ram/ram
 add wave -position insertpoint  \
 sim:/int/rst \
 sim:/int/mem_WB_DATA_OUT \
@@ -72,6 +72,15 @@ add wave -position insertpoint  \
 sim:/int/memory/u3/dataout
 add wave -position insertpoint  \
 sim:/int/fetching/IR
+add wave -position insertpoint  \
+sim:/int/memory/CatchHazard \
+sim:/int/memory/DataIn \
+sim:/int/memory/Flag
+add wave -position insertpoint  \
+sim:/int/memory/Counter
+add wave -position insertpoint  \
+sim:/int/memory/RsrcTemp \
+sim:/int/memory/RsrcFinal
 force -freeze sim:/int/Clk 1 0, 0 {50 ps} -r 100
 force -freeze sim:/int/Rst 1 0
 run

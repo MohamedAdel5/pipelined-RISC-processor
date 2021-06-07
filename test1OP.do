@@ -1,5 +1,5 @@
 vsim -gui work.int
-mem load -i D:/SchoolWork/YearThree/Sem2/test4Out.mem /int/fetching/my_ram/ram
+mem load -i E:/2022/Arch/Project/pipelined-vonneumann-RISC-processor/test4Out.mem /int/fetching/my_ram/ram
 add wave -position insertpoint  \
 sim:/int/rst \
 sim:/int/mem_WB_DATA_OUT \

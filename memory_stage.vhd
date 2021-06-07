@@ -61,5 +61,5 @@ BEGIN
 	WB_DATA <= RAM_PORT_DATA WHEN MEM_IO = '1' OR PORT_IO = '1'
 		ELSE
 		ALU_RESULT;
-
+	
 END a_mem;
